@@ -1,0 +1,276 @@
+import Image from "next/image";
+import Link from "next/link";
+import { GivingCta, Section, SectionHeading } from "@/components/Blocks";
+import { ButtonLink } from "@/components/Button";
+import { Faq } from "@/components/Faq";
+import { IconBook, IconBowl, IconCheck, IconHeart, IconHome, IconPencil, IconShield } from "@/components/Icons";
+import { MediaFrame, Placeholder } from "@/components/MediaFrame";
+import { VideoPlayer } from "@/components/VideoPlayer";
+import { approvedGallery, approvedMedia, galleryPlaceholderCategories, video } from "@/config/media";
+import { founderNames, site } from "@/config/site";
+import { homeFaq } from "@/content/faq";
+import { sponsorshipPrice } from "@/lib/pricing";
+
+const provisions = [
+  {
+    icon: IconHome,
+    title: "Care and boarding",
+    text: "A safe, settled place to live, with caring adults looking after the boys day and night.",
+  },
+  {
+    icon: IconBowl,
+    title: "Nutritious meals",
+    text: "Regular, wholesome meals every day – the foundation for health, growth and concentration in class.",
+  },
+  {
+    icon: IconPencil,
+    title: "Primary education",
+    text: "Lessons in the core subjects of the Kenyan curriculum, building literacy, numeracy and confidence.",
+  },
+  {
+    icon: IconBook,
+    title: "Qur'an and Hifdh",
+    text: "Qur'an reading and memorisation, with Tajweed, alongside wider Islamic studies.",
+  },
+  {
+    icon: IconHeart,
+    title: "A supportive environment",
+    text: "Good character, manners and values nurtured in a community where every boy is known and encouraged.",
+  },
+];
+
+export default function HomePage() {
+  const hero = approvedMedia("home-hero");
+  const posterSlot = approvedMedia(video.posterSlot) ?? hero;
+  const poster = posterSlot ? { src: posterSlot.src, alt: posterSlot.alt } : null;
+  const gallery = approvedGallery().slice(0, 5);
+  const price = sponsorshipPrice();
+
+  return (
+    <>
+      {/* 1. HERO */}
+      <section aria-labelledby="hero-title" className="relative isolate overflow-hidden bg-forest-950">
+        <div className="absolute inset-0 -z-10">
+          {hero ? (
+            <Image src={hero.src} alt={hero.alt} fill priority sizes="100vw" className="object-cover" style={{ objectPosition: hero.focus ?? "50% 40%" }} />
+          ) : (
+            <Placeholder className="h-full w-full" tone="dark" slot="home-hero" label="Hero photograph to come" corner />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-950/70 to-forest-950/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent" />
+        </div>
+        <div className="container-page flex min-h-[540px] items-center py-16 sm:min-h-[600px] lg:min-h-[min(72vh,660px)]">
+          <div className="reveal max-w-2xl text-ivory-50">
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-ivory-50/10 px-4 py-1.5 text-sm font-medium text-leaf-200 ring-1 ring-ivory-50/20 backdrop-blur-sm">
+              {site.location.area}, {site.location.region}
+            </p>
+            <h1 id="hero-title" className="h-display text-ivory-50">
+              A caring home. An education. A brighter future.
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ivory-100/90 sm:text-xl">
+              Established in {site.foundedYear}, Al-Falah gives orphaned and needy boys in {site.location.area} a safe place to live, good
+              food, a primary education and Qur&rsquo;an learning – everything a child needs to grow with confidence and faith.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <ButtonLink href="/sponsor-a-child" variant="gold" size="lg">
+                Sponsor a Child
+              </ButtonLink>
+              <ButtonLink href="/donate" variant="ghost-light" size="lg">
+                Donate Now
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. VIDEO – must stay directly after the hero */}
+      <section aria-labelledby="video-title" className="bg-ivory-50 pb-16 pt-14 sm:pb-24 sm:pt-20">
+        <div className="container-page">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow">Our school</p>
+            <h2 id="video-title" className="h-section">Step inside Al-Falah</h2>
+            <p className="mt-4 text-lg text-forest-900/80">
+              See where the boys live, learn and pray – and meet the community that cares for them each day.
+            </p>
+          </div>
+          <div className="mx-auto mt-10 max-w-5xl">
+            <VideoPlayer video={video} poster={poster} />
+          </div>
+        </div>
+      </section>
+
+      {/* 3. ABOUT */}
+      <Section tone="white" labelledBy="about-title">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <MediaFrame id="home-about" className="aspect-[4/5] w-full rounded-4xl sm:aspect-[4/3] lg:aspect-[4/5]" />
+          <div>
+            <SectionHeading eyebrow="About Al-Falah" title="A school and a home, founded in 2024" id="about-title">
+              <p>
+                Al-Falah was founded in {site.foundedYear} by {founderNames()} to care for and educate orphaned and needy boys in{" "}
+                {site.location.area}, on the Kenyan coast near Mombasa.
+              </p>
+              <p className="mt-4">
+                The school brings daily welfare, learning and Islamic development together in one place. Boys board at the school, eat
+                together, attend lessons and learn the Qur&rsquo;an – supported by staff who know each of them well.
+              </p>
+            </SectionHeading>
+            <Link href="/about" className="link-arrow mt-8">
+              Read our story
+            </Link>
+          </div>
+        </div>
+      </Section>
+
+      {/* 4. WHAT CHILDREN RECEIVE */}
+      <Section tone="cream" labelledBy="provide-title">
+        <SectionHeading eyebrow="What we provide" title="Everything a child needs to thrive" id="provide-title" align="center">
+          <p>Each boy at Al-Falah receives care for the whole person – body, mind and character.</p>
+        </SectionHeading>
+        <ul className="mt-12 flex flex-wrap justify-center gap-5">
+          {provisions.map(({ icon: Icon, title, text }) => (
+            <li key={title} className="card w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-leaf-100 text-forest-800">
+                <Icon className="h-6 w-6" />
+              </span>
+              <h3 className="mt-5 text-xl font-bold">{title}</h3>
+              <p className="mt-2 text-forest-900/80">{text}</p>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {/* 5. SPONSORSHIP */}
+      <section aria-labelledby="sponsor-title" className="bg-forest-900 py-16 text-ivory-50 sm:py-24">
+        <div className="container-page grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+          <MediaFrame id="home-sponsor" tone="dark" className="order-last aspect-[4/3] w-full rounded-4xl lg:order-first lg:aspect-[4/5]" />
+          <div>
+            <p className="eyebrow eyebrow-light">Sponsor a child</p>
+            <h2 id="sponsor-title" className="h-section text-ivory-50">
+              Give one boy a full month of care and learning
+            </h2>
+            <p className="mt-6 flex items-baseline gap-2">
+              <span className="font-serif text-6xl font-bold text-gold-300 sm:text-7xl">{price}</span>
+              <span className="text-xl text-ivory-100/85">per month</span>
+            </p>
+            <p className="mt-6 text-lg text-ivory-100/85">
+              Full monthly sponsorship covers a child&rsquo;s month of care, boarding, food, education and Qur&rsquo;an learning. Your
+              regular support gives the school the stability to plan ahead and to keep each boy in its care.
+            </p>
+            <ul className="mt-6 grid gap-2 text-ivory-100/90 sm:grid-cols-2">
+              {["Care and boarding", "Daily meals", "Primary education", "Qur'an learning"].map((x) => (
+                <li key={x} className="flex items-center gap-2">
+                  <IconCheck className="h-5 w-5 text-leaf-400" />
+                  {x}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 border-l-2 border-gold-500 pl-4 text-ivory-100/80">
+              Caring for orphans holds a special place in Islam. Many supporters also hope that a child&rsquo;s education and Qur&rsquo;an
+              learning – carried with him through life – may be a form of sadaqah jariyah, a continuing charity.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <ButtonLink href="/sponsor-a-child" variant="gold" size="lg">
+                Sponsor a Child
+              </ButtonLink>
+              <Link href="/sponsor-a-child#how-it-works" className="inline-flex min-h-[48px] items-center px-2 font-semibold text-ivory-50 underline decoration-leaf-400 decoration-2 underline-offset-[6px]">
+                How sponsorship works
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. CURRICULUM */}
+      <Section tone="ivory" labelledBy="curriculum-title">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <SectionHeading eyebrow="Our curriculum" title="Two strands of learning, side by side" id="curriculum-title">
+              <p>
+                Al-Falah combines the Kenyan Competency-Based Education curriculum with a full Islamic education. The two are studied
+                together throughout a boy&rsquo;s schooling, so academic progress and faith grow hand in hand.
+              </p>
+            </SectionHeading>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl bg-white p-5 ring-1 ring-forest-900/5">
+                <p className="font-serif text-lg font-bold">Primary education</p>
+                <p className="mt-1 text-forest-900/80">English, Kiswahili, Mathematics, Science, Social Studies and more.</p>
+              </div>
+              <div className="rounded-2xl bg-white p-5 ring-1 ring-forest-900/5">
+                <p className="font-serif text-lg font-bold">Qur&rsquo;an and Islamic studies</p>
+                <p className="mt-1 text-forest-900/80">Madrasa (Ta&rsquo;lim), Arabic and Qur&rsquo;an memorisation (Tahfidh).</p>
+              </div>
+            </div>
+            <Link href="/curriculum" className="link-arrow mt-8">
+              View our curriculum
+            </Link>
+          </div>
+          <MediaFrame id="home-curriculum" className="aspect-[4/3] w-full rounded-4xl" />
+        </div>
+      </Section>
+
+      {/* 7. SCHOOL LIFE */}
+      <Section tone="white" labelledBy="life-title">
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <SectionHeading eyebrow="School life" title="A day at Al-Falah" id="life-title">
+            <p>Lessons, meals, prayer and play – a glimpse of the everyday rhythm of the school.</p>
+          </SectionHeading>
+          <Link href="/school-life" className="link-arrow shrink-0">
+            See the school life gallery
+          </Link>
+        </div>
+        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {gallery.length > 0
+            ? gallery.map((g, i) => (
+                <li key={g.src} className={`relative overflow-hidden rounded-3xl ${i === 0 ? "col-span-2 row-span-2 aspect-square lg:aspect-auto" : "aspect-square"}`}>
+                  <Image src={g.src} alt={g.alt} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" style={{ objectPosition: g.focus ?? "50% 50%" }} />
+                </li>
+              ))
+            : galleryPlaceholderCategories.slice(0, 5).map((c, i) => (
+                <li key={i} className={`${i === 0 ? "col-span-2 row-span-2 aspect-square lg:aspect-auto" : "aspect-square"}`}>
+                  <Placeholder className="h-full w-full rounded-3xl" label={`${c} photo to come`} slot="gallery" />
+                </li>
+              ))}
+        </ul>
+      </Section>
+
+      {/* 8. TRUST & ACCOUNTABILITY */}
+      <Section tone="cream" labelledBy="trust-title">
+        <div className="grid gap-10 lg:grid-cols-[auto_1fr] lg:gap-16">
+          <span className="flex h-16 w-16 items-center justify-center rounded-3xl bg-forest-800 text-ivory-50">
+            <IconShield className="h-8 w-8" />
+          </span>
+          <div className="max-w-3xl">
+            <SectionHeading eyebrow="Trust and accountability" title="Support that sustains the work" id="trust-title">
+              <p>
+                {site.trust.summary} The trust&rsquo;s registered objects are to raise funds to educate needy and orphaned children – the
+                purpose your gifts are given for.
+              </p>
+              <p className="mt-4">
+                We are committed to using every gift carefully, to being open with supporters about how the school is run, and to
+                protecting the privacy and dignity of the children in our care.
+              </p>
+            </SectionHeading>
+            <Link href="/about#trust" className="link-arrow mt-8">
+              The trust and how we operate
+            </Link>
+          </div>
+        </div>
+      </Section>
+
+      {/* 9. FAQ */}
+      <Section tone="ivory" labelledBy="faq-title">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+          <SectionHeading eyebrow="Questions" title="Frequently asked questions" id="faq-title">
+            <p>
+              Can&rsquo;t find what you need? <Link href="/contact" className="font-semibold text-forest-800 underline underline-offset-4">Contact us</Link> and we will be glad to help.
+            </p>
+          </SectionHeading>
+          <Faq items={homeFaq} />
+        </div>
+      </Section>
+
+      {/* 10. GIVING */}
+      <GivingCta title="Help a boy grow in knowledge and faith" />
+    </>
+  );
+}
