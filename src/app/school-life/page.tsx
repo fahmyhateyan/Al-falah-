@@ -24,7 +24,7 @@ export default function SchoolLifePage() {
             {photos.map((p) => (
               <li key={p.src} className="break-inside-avoid">
                 <figure className="overflow-hidden rounded-3xl bg-forest-50">
-                  <Image src={p.src} alt={p.alt} width={1200} height={900} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="h-auto w-full" loading="lazy" />
+                  <Image src={p.src} alt={p.alt} width={1200} height={800} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="h-auto w-full" loading="lazy" />
                   {(p.caption || p.category) && (
                     <figcaption className="flex items-center justify-between gap-3 px-4 py-3 text-sm">
                       <span className="text-forest-900">{p.caption}</span>

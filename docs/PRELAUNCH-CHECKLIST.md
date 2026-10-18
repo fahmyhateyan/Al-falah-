@@ -5,11 +5,9 @@ before public launch. Settings referenced are in `src/config/site.ts` unless sta
 
 ## 1. Names and facts to confirm
 
-- [ ] **Founders' public names and titles – CONFLICT TO RESOLVE.** The brief gives "Dr. Fuad Abdallah" and
-      "Dr. Durra said Sherman" (and elsewhere "Dr. Dora"). The supplied legal documents give the trustees as
-      **Fuad Abdallah Mohamed** (also spelled "Fuwad" in the trust deed and "Fuad Abdalla" in its signature block) and
-      **Durra F Abdallah / Durra Fuad Abdallah**. The site currently shows the brief's spellings
-      ("Dr. Fuad Abdallah", "Dr. Durra Said Sherman"). Confirm the exact public names and whether the title "Dr." applies.
+- [x] **Founders' public names** confirmed by the owner: **Dr Fuwad Abdallah Alnahdi** and **Dr Durra Said Sherman**.
+      Note: these differ from the trustee names on the registered documents (Fuad Abdallah Mohamed; Durra F Abdallah),
+      so the trustee list stays hidden unless you choose to publish it as registered.
 - [ ] Founder roles, short biographies and photos (optional) – none invented.
 - [ ] Preferred public name: "Al-Falah School, Kikambala" (logo) vs "Al-Falah Boys School, Kikambala" (curriculum document).
 - [ ] Public address and map (currently "Kikambala, coastal Kenya, near Mombasa" only).
@@ -43,8 +41,8 @@ From the supplied **Certificate of Incorporation** (Trustees (Perpetual Successi
 
 ## 3. Media
 
-- [ ] Real, approved school photographs for every slot in `docs/ASSETS.md` (currently all placeholders).
-- [ ] Gallery photos with captions.
+- [x] School photographs supplied (14) and placed in every slot and the gallery.
+- [ ] Confirm consent arrangements cover publishing these photos – several show boys' faces clearly.
 - [ ] School video (MP4 or YouTube/Vimeo) with captions, and a poster frame.
 - [ ] Higher-resolution or vector logo (the supplied JPG was cropped and used intact).
 - [ ] Written confirmation that published photos are approved for public use under the school's consent arrangements.

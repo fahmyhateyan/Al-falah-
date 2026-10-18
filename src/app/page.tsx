@@ -56,7 +56,7 @@ export default function HomePage() {
           ) : (
             <Placeholder className="h-full w-full" tone="dark" slot="home-hero" label="Hero photograph to come" corner />
           )}
-          <div className="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-950/70 to-forest-950/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-forest-950/85 via-forest-950/55 to-forest-950/10" />
           <div className="absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent" />
         </div>
         <div className="container-page flex min-h-[540px] items-center py-16 sm:min-h-[600px] lg:min-h-[min(72vh,660px)]">

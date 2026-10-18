@@ -13,7 +13,7 @@
  */
 
 export type Founder = {
-  /** Display name with title, e.g. "Dr. Fuad Abdallah". */
+  /** Display name with title, e.g. "Dr Fuwad Abdallah Alnahdi". */
   name: string;
   /** Optional approved role description. Do not invent. */
   role: string | null;
@@ -43,14 +43,12 @@ export const site = {
     mapEmbedUrl: null as string | null, // MISSING – only once address approved
   },
 
-  // CONFIRM – working English spellings from the brief. The registered trust
-  // documents give the trustees as "Fuad Abdallah Mohamed" and
-  // "Durra F Abdallah" / "Durra Fuad Abdallah". The brief gives the second
-  // founder as "Dr. Durra Said Sherman" (and elsewhere "Dr. Dora").
-  // The owner must confirm the exact public names and titles.
+  // VERIFIED – public names confirmed by the owner (18 Oct 2026). These differ
+  // from the names on the registered trust documents ("Fuad Abdallah Mohamed",
+  // "Durra F Abdallah"), which are used only for the trust's legal details.
   founders: [
-    { name: "Dr. Fuad Abdallah", role: null, bio: null, photo: null },
-    { name: "Dr. Durra Said Sherman", role: null, bio: null, photo: null },
+    { name: "Dr Fuwad Abdallah Alnahdi", role: null, bio: null, photo: null },
+    { name: "Dr Durra Said Sherman", role: null, bio: null, photo: null },
   ] satisfies Founder[],
 
   sponsorship: {
