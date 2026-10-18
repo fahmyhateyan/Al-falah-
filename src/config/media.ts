@@ -42,6 +42,28 @@ export const media = {
     approved: true,
     guidance: "Home page hero, wide landscape. A warm, dignified view of school life or the school buildings. Shown large behind the main heading.",
   },
+  // Extra home page background slides (shown after "home-hero" in a slow crossfade).
+  "hero-learning": {
+    src: "/images/school/classroom-lesson.jpg",
+    alt: "Boys at round tables in a classroom while their teacher writes on the whiteboard",
+    focus: "50% 55%",
+    approved: true,
+    guidance: "Home background slide: children learning in class (wide landscape).",
+  },
+  "hero-mosque": {
+    src: "/images/school/congregational-prayer.jpg",
+    alt: "Boys and staff praying together in the school mosque",
+    focus: "50% 88%",
+    approved: true,
+    guidance: "Home background slide: children in the mosque (wide landscape).",
+  },
+  "hero-meals": {
+    src: "/images/school/dining-hall-meal.jpg",
+    alt: "Rows of boys eating together in the school dining hall",
+    focus: "50% 55%",
+    approved: true,
+    guidance: "Home background slide: children eating together (wide landscape).",
+  },
   "video-poster": {
     src: "/images/school/school-courtyard.jpg",
     alt: "The Al-Falah school courtyard and buildings from above, with the Indian Ocean beyond",
@@ -157,6 +179,13 @@ export const media = {
 } satisfies Record<string, MediaSlot>;
 
 export type MediaId = keyof typeof media;
+
+/**
+ * HOME PAGE BACKGROUND SLIDESHOW – slots shown in order behind the main
+ * heading, each for about 6 seconds with a gentle crossfade. Add, remove or
+ * reorder slot ids here. Visitors who prefer reduced motion see only the first.
+ */
+export const heroSlides: MediaId[] = ["home-hero", "hero-learning", "hero-mosque", "hero-meals"];
 
 /**
  * SCHOOL LIFE GALLERY – add as many entries as you like.

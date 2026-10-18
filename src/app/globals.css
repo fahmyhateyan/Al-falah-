@@ -70,3 +70,15 @@
   outline: 3px solid theme("colors.gold.500");
   outline-offset: 3px;
 }
+
+/* Home hero background slideshow (see components/HeroSlideshow.tsx) */
+.hero-slide { opacity: 0; will-change: opacity, transform; }
+.hero-slide:first-child { opacity: 1; }
+#hero-pause:checked ~ .hero-slides .hero-slide { animation-play-state: paused !important; }
+#hero-pause:checked ~ .hero-pause-btn .when-playing { display: none; }
+#hero-pause:checked ~ .hero-pause-btn .when-paused { display: inline-flex; }
+#hero-pause:focus-visible ~ .hero-pause-btn { outline: 3px solid theme("colors.gold.500"); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { animation: none !important; }
+  .hero-pause-btn { display: none !important; }
+}

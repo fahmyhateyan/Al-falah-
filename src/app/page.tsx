@@ -3,6 +3,7 @@ import Link from "next/link";
 import { GivingCta, Section, SectionHeading } from "@/components/Blocks";
 import { ButtonLink } from "@/components/Button";
 import { Faq } from "@/components/Faq";
+import { HeroSlideshow } from "@/components/HeroSlideshow";
 import { IconBook, IconBowl, IconCheck, IconHeart, IconHome, IconPencil, IconShield } from "@/components/Icons";
 import { MediaFrame, Placeholder } from "@/components/MediaFrame";
 import { VideoPlayer } from "@/components/VideoPlayer";
@@ -51,14 +52,10 @@ export default function HomePage() {
     <>
       {/* 1. HERO */}
       <section aria-labelledby="hero-title" className="relative isolate overflow-hidden bg-forest-950">
+        <HeroSlideshow />
         <div className="absolute inset-0 -z-10">
-          {hero ? (
-            <Image src={hero.src} alt={hero.alt} fill priority sizes="100vw" className="object-cover" style={{ objectPosition: hero.focus ?? "50% 40%" }} />
-          ) : (
-            <Placeholder className="h-full w-full" tone="dark" slot="home-hero" label="Hero photograph to come" corner />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-r from-forest-950/85 via-forest-950/55 to-forest-950/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-forest-950/85 via-forest-950/55 to-forest-950/10" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent" />
         </div>
         <div className="container-page flex min-h-[540px] items-center py-16 sm:min-h-[600px] lg:min-h-[min(72vh,660px)]">
           <div className="reveal max-w-2xl text-ivory-50">
