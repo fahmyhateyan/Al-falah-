@@ -36,23 +36,23 @@ export type MediaSlot = {
 export const media = {
   // ----- Home -----
   "home-hero": {
-    src: "/images/school/mosque-prayer-hall.jpg",
-    alt: "The bright prayer hall at Al-Falah, with boys in green seated at the front and staff standing behind them",
-    focus: "50% 55%",
+    src: "/images/school/aerial-coastline.jpg",
+    alt: "Aerial view of the Al-Falah school buildings, courtyard and mosque, surrounded by green land near the Kikambala coastline",
+    focus: "50% 45%",
     approved: true,
     guidance: "Home page hero, wide landscape. A warm, dignified view of school life or the school buildings. Shown large behind the main heading.",
   },
   "video-poster": {
-    src: "/images/school/congregational-prayer.jpg",
-    alt: "Boys and staff in prostration together during prayer in the school mosque",
-    focus: "50% 60%",
+    src: "/images/school/school-courtyard.jpg",
+    alt: "The Al-Falah school courtyard and buildings from above, with the Indian Ocean beyond",
+    focus: "50% 55%",
     approved: true,
     guidance: "Still image shown on the school video before it plays (16:9). Ideally a frame from the video itself.",
   },
   "home-about": {
-    src: "/images/school/football-match.jpg",
-    alt: "Boys playing football on the school's grass pitch beside the school buildings",
-    focus: "40% 50%",
+    src: "/images/school/boys-walking.jpg",
+    alt: "Boys in green robes walking in a line past the school buildings",
+    focus: "62% 60%",
     approved: true,
     guidance: "Home page 'About Al-Falah' section, portrait or square. The school setting or grounds.",
   },
@@ -73,9 +73,9 @@ export const media = {
 
   // ----- About -----
   "about-hero": {
-    src: "/images/school/assembly-line-up.jpg",
-    alt: "Boys in green Al-Falah School Kikambala tracksuits lining up outside the school building",
-    focus: "50% 45%",
+    src: "/images/school/aerial-ocean-view.jpg",
+    alt: "Aerial view of the Kenyan coastline with the Al-Falah school close to the ocean",
+    focus: "50% 70%",
     approved: true,
     guidance: "About Us page banner, wide landscape. The school buildings or grounds.",
   },
@@ -116,9 +116,9 @@ export const media = {
     guidance: "Curriculum page banner, wide landscape. A lesson in progress.",
   },
   "curriculum-quran": {
-    src: "/images/school/mosque-gathering-teachers.jpg",
-    alt: "Boys seated on the mosque carpet with their teachers standing behind them",
-    focus: "50% 55%",
+    src: "/images/school/quran-lesson.jpg",
+    alt: "A teacher listening as a boy reads from the Qur'an during a lesson",
+    focus: "55% 50%",
     approved: true,
     guidance: "Qur'an and Tahfidh section, portrait or square. Qur'an reading or a madrasa class.",
   },
@@ -148,9 +148,9 @@ export const media = {
 
   // ----- Contact -----
   "contact-image": {
-    src: "/images/school/football-kick-off.jpg",
-    alt: "A boy in a red kit kicking off a football match on the school pitch",
-    focus: "50% 50%",
+    src: "/images/school/school-courtyard.jpg",
+    alt: "The Al-Falah school courtyard and buildings from above, with the Indian Ocean beyond",
+    focus: "50% 55%",
     approved: true,
     guidance: "Contact page, landscape. The school entrance or surroundings.",
   },
@@ -168,6 +168,14 @@ export type GalleryItem = MediaSlot & {
 };
 
 export const gallery: GalleryItem[] = [
+  {
+    src: "/images/school/quran-lesson.jpg",
+    alt: "A teacher listening as a boy reads from the Qur'an during a lesson",
+    caption: "Qur'an lesson",
+    category: "Qur'an",
+    approved: true,
+    guidance: "",
+  },
   {
     src: "/images/school/congregational-prayer.jpg",
     alt: "Boys and staff in prostration together during prayer in the school mosque",
@@ -193,6 +201,14 @@ export const gallery: GalleryItem[] = [
     guidance: "",
   },
   {
+    src: "/images/school/maths-lesson-whiteboard.jpg",
+    alt: "A pupil working through an addition example on the whiteboard during a mathematics lesson",
+    caption: "Mathematics: learning addition",
+    category: "Learning",
+    approved: true,
+    guidance: "",
+  },
+  {
     src: "/images/school/lunch-table.jpg",
     alt: "Boys in green uniforms sharing a meal at a long white table",
     caption: "Lunch together",
@@ -201,10 +217,10 @@ export const gallery: GalleryItem[] = [
     guidance: "",
   },
   {
-    src: "/images/school/maths-lesson-whiteboard.jpg",
-    alt: "A pupil working through an addition example on the whiteboard during a mathematics lesson",
-    caption: "Mathematics: learning addition",
-    category: "Learning",
+    src: "/images/school/boys-walking.jpg",
+    alt: "Boys in green robes walking in a line past the school buildings",
+    caption: "On the way to class",
+    category: "Daily life",
     approved: true,
     guidance: "",
   },
@@ -277,6 +293,30 @@ export const gallery: GalleryItem[] = [
     alt: "Boys in green robes seated at the white tables of the dining hall",
     caption: "Together in the dining hall",
     category: "Meals",
+    approved: true,
+    guidance: "",
+  },
+  {
+    src: "/images/school/aerial-coastline.jpg",
+    alt: "Aerial view of the Al-Falah school buildings, courtyard and mosque near the Kikambala coastline",
+    caption: "Al-Falah from above",
+    category: "Grounds",
+    approved: true,
+    guidance: "",
+  },
+  {
+    src: "/images/school/school-courtyard.jpg",
+    alt: "The Al-Falah school courtyard and buildings from above, with the Indian Ocean beyond",
+    caption: "The school courtyard",
+    category: "Grounds",
+    approved: true,
+    guidance: "",
+  },
+  {
+    src: "/images/school/aerial-ocean-view.jpg",
+    alt: "Aerial view of the Kenyan coastline with the Al-Falah school close to the ocean",
+    caption: "By the Indian Ocean",
+    category: "Grounds",
     approved: true,
     guidance: "",
   },
