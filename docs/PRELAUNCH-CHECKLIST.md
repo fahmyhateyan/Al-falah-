@@ -5,7 +5,7 @@ before public launch. Settings referenced are in `src/config/site.ts` unless sta
 
 ## 1. Names and facts to confirm
 
-- [x] **Founders' public names** confirmed by the owner: **Dr Fuad Abdallah Muhamed Alnahdi** and his wife **Dr Durra Said Sherman**.
+- [x] **Founders' public names** confirmed by the owner: **Dr Fuwad Abdallah** and his wife **Dr Durra Said Sherman**.
       Note: these differ from the trustee names on the registered documents (Fuad Abdallah Mohamed; Durra F Abdallah),
       so the trustee list stays hidden unless you choose to publish it as registered.
 - [ ] Founder roles, short biographies and photos (optional) – none invented.

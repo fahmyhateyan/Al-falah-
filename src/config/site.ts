@@ -13,7 +13,7 @@
  */
 
 export type Founder = {
-  /** Display name with title, e.g. "Dr Fuad Abdallah Muhamed Alnahdi". */
+  /** Display name with title, e.g. "Dr Fuwad Abdallah". */
   name: string;
   /** Optional approved role description. Do not invent. */
   role: string | null;
@@ -49,7 +49,7 @@ export const site = {
   // from the names on the registered trust documents ("Fuad Abdallah Mohamed",
   // "Durra F Abdallah"), which are used only for the trust's legal details.
   founders: [
-    { name: "Dr Fuad Abdallah Muhamed Alnahdi", role: null, bio: null, photo: "founder-1" },
+    { name: "Dr Fuwad Abdallah", role: null, bio: null, photo: "founder-1" },
     { name: "Dr Durra Said Sherman", role: null, bio: null, photo: null, relation: "his wife" },
   ] satisfies Founder[],
 
