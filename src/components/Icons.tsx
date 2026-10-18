@@ -68,3 +68,15 @@ export const IconUsers = (p: P) => (
 export const IconSun = (p: P) => (
   <svg {...base(p)}><circle cx="12" cy="12" r="4" /><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4" /></svg>
 );
+export const IconDome = (p: P) => (
+  <svg {...base(p)}><path d="M12 3c.8 2.2 3 3.8 5 5.6 1.9 1.7 2.5 3.6 2.5 5.4V21H4.5v-7c0-1.8.6-3.7 2.5-5.4 2-1.8 4.2-3.4 5-5.6Z" /><path d="M10 21v-4a2 2 0 0 1 4 0v4" /></svg>
+);
+export const IconBall = (p: P) => (
+  <svg {...base(p)}><circle cx="12" cy="12" r="9" /><path d="m12 7 4 3-1.5 4.5h-5L8 10l4-3Z" /><path d="M12 3v4M16 10l4.5-1.5M14.5 14.5 17 19M9.5 14.5 7 19M8 10 3.5 8.5" /></svg>
+);
+export const IconPot = (p: P) => (
+  <svg {...base(p)}><path d="M4 10h16v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-5Z" /><path d="M2 10h20M9 6c0-1 .7-1.5.7-2.5M14 6c0-1 .7-1.5.7-2.5" /></svg>
+);
+export const IconBed = (p: P) => (
+  <svg {...base(p)}><path d="M3 19V6M21 19v-6a3 3 0 0 0-3-3H10v6" /><path d="M3 16h18" /><circle cx="6.5" cy="12" r="1.8" /></svg>
+);

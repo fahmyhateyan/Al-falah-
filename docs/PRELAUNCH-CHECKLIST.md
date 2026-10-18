@@ -16,6 +16,7 @@ before public launch. Settings referenced are in `src/config/site.ts` unless sta
       the brief describes primary education. The curriculum page presents the outline as the school's pathway without
       claiming every level is running now (`src/content/curriculum.ts` → `curriculumDetails`).
 - [ ] Daily routine, Qur'an memorisation approach, class groups and progress reporting (optional editable areas).
+- [ ] Facility numbers for the Facilities page (e.g. how many classrooms and madrasa rooms) and anything else to list, such as a library, clinic or computer room (`src/content/facilities.ts`).
 
 ## 2. The trust
 

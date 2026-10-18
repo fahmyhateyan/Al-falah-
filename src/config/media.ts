@@ -64,6 +64,49 @@ export const media = {
     approved: true,
     guidance: "Home background slide: children eating together (wide landscape).",
   },
+  // Facilities page photos (see src/content/facilities.ts).
+  "facility-mosque": {
+    src: "/images/school/mosque-prayer-hall.jpg",
+    alt: "The bright prayer hall of the school mosque",
+    focus: "50% 55%",
+    approved: true,
+    guidance: "Facilities page photo (landscape).",
+  },
+  "facility-classrooms": {
+    src: "/images/school/phonics-classroom.jpg",
+    alt: "A classroom with round tables and phonics charts on the walls",
+    focus: "50% 50%",
+    approved: true,
+    guidance: "Facilities page photo (landscape).",
+  },
+  "facility-madrasa": {
+    src: "/images/school/quran-lesson.jpg",
+    alt: "A carpeted madrasa room where a teacher listens to a boy reading the Qur'an",
+    focus: "55% 50%",
+    approved: true,
+    guidance: "Facilities page photo (landscape).",
+  },
+  "facility-dining": {
+    src: "/images/school/dining-hall-meal.jpg",
+    alt: "The school dining hall with rows of white tables and benches",
+    focus: "50% 50%",
+    approved: true,
+    guidance: "Facilities page photo (landscape).",
+  },
+  "facility-sports": {
+    src: "/images/school/football-match.jpg",
+    alt: "The fenced grass football pitch beside the school buildings",
+    focus: "50% 50%",
+    approved: true,
+    guidance: "Facilities page photo (landscape).",
+  },
+  "facility-grounds": {
+    src: "/images/school/school-courtyard.jpg",
+    alt: "The green courtyard and school buildings from above",
+    focus: "50% 55%",
+    approved: true,
+    guidance: "Facilities page photo (landscape).",
+  },
   "video-poster": {
     src: "/images/school/school-courtyard.jpg",
     alt: "The Al-Falah school courtyard and buildings from above, with the Indian Ocean beyond",
@@ -192,8 +235,12 @@ export const heroSlides: MediaId[] = ["home-hero", "hero-learning", "hero-mosque
  * Each entry appears on /school-life (and the first few on the home page)
  * once it has a `src` and `approved: true`.
  */
+/** Sections of the gallery page, in display order. */
+export const galleryCategories = ["Mosque & Qur'an", "Classrooms", "Dining hall", "Sports & play", "Daily life", "School grounds"] as const;
+export type GalleryCategory = (typeof galleryCategories)[number];
+
 export type GalleryItem = MediaSlot & {
-  category: "Learning" | "Qur'an" | "Meals" | "Daily life" | "Grounds";
+  category: GalleryCategory;
 };
 
 export const gallery: GalleryItem[] = [
@@ -201,7 +248,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/quran-lesson.jpg",
     alt: "A teacher listening as a boy reads from the Qur'an during a lesson",
     caption: "Qur'an lesson",
-    category: "Qur'an",
+    category: "Mosque & Qur'an",
     approved: true,
     guidance: "",
   },
@@ -209,7 +256,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/congregational-prayer.jpg",
     alt: "Boys and staff in prostration together during prayer in the school mosque",
     caption: "Prayer together",
-    category: "Qur'an",
+    category: "Mosque & Qur'an",
     approved: true,
     guidance: "",
   },
@@ -217,7 +264,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/phonics-classroom.jpg",
     alt: "A bright classroom decorated with phonics charts, with boys seated at round tables",
     caption: "Our phonics classroom",
-    category: "Learning",
+    category: "Classrooms",
     approved: true,
     guidance: "",
   },
@@ -225,7 +272,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/football-match.jpg",
     alt: "Boys playing football on the school's grass pitch while friends and staff watch",
     caption: "Match day on the school pitch",
-    category: "Daily life",
+    category: "Sports & play",
     approved: true,
     guidance: "",
   },
@@ -233,7 +280,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/maths-lesson-whiteboard.jpg",
     alt: "A pupil working through an addition example on the whiteboard during a mathematics lesson",
     caption: "Mathematics: learning addition",
-    category: "Learning",
+    category: "Classrooms",
     approved: true,
     guidance: "",
   },
@@ -241,7 +288,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/lunch-table.jpg",
     alt: "Boys in green uniforms sharing a meal at a long white table",
     caption: "Lunch together",
-    category: "Meals",
+    category: "Dining hall",
     approved: true,
     guidance: "",
   },
@@ -257,7 +304,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/mosque-prayer-hall.jpg",
     alt: "The bright prayer hall at Al-Falah, with boys seated at the front and staff standing behind them",
     caption: "The school mosque",
-    category: "Grounds",
+    category: "Mosque & Qur'an",
     approved: true,
     guidance: "",
   },
@@ -273,7 +320,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/dining-hall-meal.jpg",
     alt: "The school dining hall at mealtime, with rows of boys eating together",
     caption: "The dining hall",
-    category: "Meals",
+    category: "Dining hall",
     approved: true,
     guidance: "",
   },
@@ -281,7 +328,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/mosque-gathering-teachers.jpg",
     alt: "Boys seated on the mosque carpet with their teachers standing behind them",
     caption: "Gathering in the mosque",
-    category: "Qur'an",
+    category: "Mosque & Qur'an",
     approved: true,
     guidance: "",
   },
@@ -289,7 +336,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/classroom-lesson.jpg",
     alt: "A classroom of boys at round tables while their teacher writes on the whiteboard",
     caption: "A lesson in progress",
-    category: "Learning",
+    category: "Classrooms",
     approved: true,
     guidance: "",
   },
@@ -297,7 +344,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/football-kick-off.jpg",
     alt: "A boy in a red kit kicking off a football match on the school pitch",
     caption: "Kick-off",
-    category: "Daily life",
+    category: "Sports & play",
     approved: true,
     guidance: "",
   },
@@ -305,7 +352,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/lunch-dining-hall.jpg",
     alt: "Boys eating lunch together at white tables in the dining hall",
     caption: "Mealtime",
-    category: "Meals",
+    category: "Dining hall",
     approved: true,
     guidance: "",
   },
@@ -313,7 +360,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/mosque-boys-seated.jpg",
     alt: "Boys in green and white robes sitting together on the carpet of the school mosque",
     caption: "In the mosque",
-    category: "Qur'an",
+    category: "Mosque & Qur'an",
     approved: true,
     guidance: "",
   },
@@ -321,7 +368,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/dining-hall-boys.jpg",
     alt: "Boys in green robes seated at the white tables of the dining hall",
     caption: "Together in the dining hall",
-    category: "Meals",
+    category: "Dining hall",
     approved: true,
     guidance: "",
   },
@@ -329,7 +376,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/aerial-coastline.jpg",
     alt: "Aerial view of the Al-Falah school buildings, courtyard and mosque near the Kikambala coastline",
     caption: "Al-Falah from above",
-    category: "Grounds",
+    category: "School grounds",
     approved: true,
     guidance: "",
   },
@@ -337,7 +384,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/school-courtyard.jpg",
     alt: "The Al-Falah school courtyard and buildings from above, with the Indian Ocean beyond",
     caption: "The school courtyard",
-    category: "Grounds",
+    category: "School grounds",
     approved: true,
     guidance: "",
   },
@@ -345,21 +392,14 @@ export const gallery: GalleryItem[] = [
     src: "/images/school/aerial-ocean-view.jpg",
     alt: "Aerial view of the Kenyan coastline with the Al-Falah school close to the ocean",
     caption: "By the Indian Ocean",
-    category: "Grounds",
+    category: "School grounds",
     approved: true,
     guidance: "",
   },
 ];
 
 /** Gallery categories the placeholder grid shows while photos are pending. */
-export const galleryPlaceholderCategories: GalleryItem["category"][] = [
-  "Learning",
-  "Qur'an",
-  "Meals",
-  "Daily life",
-  "Grounds",
-  "Learning",
-];
+export const galleryPlaceholderCategories: GalleryCategory[] = ["Mosque & Qur'an", "Classrooms", "Dining hall", "Sports & play", "School grounds", "Classrooms"];
 
 /**
  * SCHOOL VIDEO

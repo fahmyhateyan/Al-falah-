@@ -156,14 +156,23 @@ export const site = {
 export type SiteConfig = typeof site;
 
 /** Main navigation, in order. */
-export const mainNav = [
+export type NavItem = { href: string; label: string; children?: { href: string; label: string }[] };
+
+export const mainNav: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/curriculum", label: "Our Curriculum" },
   { href: "/sponsor-a-child", label: "Sponsor a Child" },
-  { href: "/school-life", label: "School Life" },
+  {
+    href: "/school-life",
+    label: "School Life",
+    children: [
+      { href: "/school-life", label: "Our Gallery" },
+      { href: "/school-life/facilities", label: "Our Facilities" },
+    ],
+  },
   { href: "/contact", label: "Contact" },
-] as const;
+];
 
 export const policyNav = [
   { href: "/privacy", label: "Privacy policy" },

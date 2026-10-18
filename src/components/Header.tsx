@@ -61,18 +61,38 @@ export function Header() {
         <nav aria-label="Main" className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {mainNav.map((item) => (
-              <li key={item.href}>
+              <li key={item.href} className={item.children ? "group relative" : undefined}>
                 <Link
                   href={item.href}
-                  aria-current={isActive(item.href) ? "page" : undefined}
-                  className={`rounded-full px-3 py-2 text-[0.95rem] font-medium transition-colors xl:px-4 ${
+                  aria-current={isActive(item.href) && !item.children ? "page" : undefined}
+                  className={`inline-flex items-center gap-1 rounded-full px-3 py-2 text-[0.95rem] font-medium transition-colors xl:px-4 ${
                     isActive(item.href)
                       ? "bg-forest-800/[0.07] text-forest-950"
                       : "text-forest-800 hover:bg-forest-800/5 hover:text-forest-950"
                   }`}
                 >
                   {item.label}
+                  {item.children && (
+                    <svg aria-hidden width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" className="transition-transform group-hover:rotate-180 group-focus-within:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
+                  )}
                 </Link>
+                {item.children && (
+                  <div className="invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-2 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <ul className="rounded-2xl bg-white p-2 shadow-lg ring-1 ring-forest-900/10">
+                      {item.children.map((c) => (
+                        <li key={c.href}>
+                          <Link
+                            href={c.href}
+                            aria-current={pathname === c.href ? "page" : undefined}
+                            className={`block rounded-xl px-4 py-2.5 text-[0.95rem] font-medium ${pathname === c.href ? "bg-mist-100 text-forest-950" : "text-forest-800 hover:bg-mist-100 hover:text-forest-950"}`}
+                          >
+                            {c.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </li>
             ))}
           </ul>
@@ -121,6 +141,22 @@ export function Header() {
                     {item.label}
                     {isActive(item.href) && <span className="h-2 w-2 rounded-full bg-leaf-500" aria-hidden />}
                   </Link>
+                  {item.children && (
+                    <ul className="-mt-1 mb-3 grid gap-1 border-l-2 border-leaf-200 pl-4">
+                      {item.children.map((c) => (
+                        <li key={c.href}>
+                          <Link
+                            href={c.href}
+                            aria-current={pathname === c.href ? "page" : undefined}
+                            onClick={() => setOpen(false)}
+                            className="block py-2 text-lg text-forest-800"
+                          >
+                            {c.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>

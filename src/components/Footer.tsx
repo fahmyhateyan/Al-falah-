@@ -29,8 +29,8 @@ export function Footer() {
         <nav aria-label="Footer" className="lg:col-span-2">
           <h2 className="font-sans text-sm font-semibold uppercase tracking-[0.14em] text-leaf-200">Explore</h2>
           <ul className="mt-4 space-y-2.5">
-            {mainNav.map((l) => (
-              <li key={l.href}><Link className="text-mist-100/90 hover:text-white hover:underline" href={l.href}>{l.label}</Link></li>
+            {mainNav.flatMap((l) => l.children ?? [l]).map((l) => (
+              <li key={l.href + l.label}><Link className="text-mist-100/90 hover:text-white hover:underline" href={l.href}>{l.label}</Link></li>
             ))}
             <li><Link className="text-mist-100/90 hover:text-white hover:underline" href="/donate">Donate</Link></li>
           </ul>
