@@ -30,7 +30,7 @@ export const site = {
   // name: the curriculum document uses "Al-Falah Boys School, Kikambala".
   name: "Al-Falah",
   fullName: "Al-Falah School, Kikambala",
-  tagline: "Success is in Knowledge", // VERIFIED – from the logo
+  tagline: "Success in Knowledge", // VERIFIED – owner-confirmed caption (the logo artwork reads "Success is in Knowledge")
   // MISSING – set to the live domain before launch (used for sitemap/metadata).
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 
