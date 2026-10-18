@@ -9,6 +9,7 @@ import { VideoPlayer } from "@/components/VideoPlayer";
 import { approvedGallery, approvedMedia, galleryPlaceholderCategories, video } from "@/config/media";
 import { founderNames, site } from "@/config/site";
 import { homeFaq } from "@/content/faq";
+import { hadiths, quranVerse } from "@/content/sacred-texts";
 import { sponsorshipPrice } from "@/lib/pricing";
 
 const provisions = [
@@ -138,6 +139,43 @@ export default function HomePage() {
           ))}
         </ul>
       </Section>
+
+      {/* 4b. WHY IT MATTERS – Qur'an and hadith (see src/content/sacred-texts.ts) */}
+      <section aria-labelledby="faith-title" className="relative overflow-hidden bg-ivory-50 py-16 sm:py-24">
+        <div className="pattern-dots absolute inset-0 opacity-40" aria-hidden />
+        <div className="container-page relative">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow">Why it matters</p>
+            <h2 id="faith-title" className="h-section">
+              Caring for the orphan
+            </h2>
+          </div>
+          <figure className="mx-auto mt-10 max-w-3xl text-center">
+            <p lang="ar" dir="rtl" className="font-arabic text-3xl leading-[1.9] text-forest-900 sm:text-4xl">
+              {quranVerse.arabic}
+            </p>
+            <blockquote className="mt-6 font-serif text-xl italic leading-relaxed text-forest-900 sm:text-2xl">
+              &ldquo;{quranVerse.english}&rdquo;
+            </blockquote>
+            <figcaption className="mt-4 text-sm font-semibold uppercase tracking-[0.12em] text-forest-700">
+              {quranVerse.reference}
+              <span className="block pt-1 text-xs font-normal normal-case tracking-normal text-forest-800/70">Translation: {quranVerse.translation}</span>
+            </figcaption>
+          </figure>
+          <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-2">
+            {hadiths.map((h) => (
+              <figure key={h.reference} className="card flex flex-col">
+                <span aria-hidden className="font-serif text-5xl leading-none text-gold-500">&ldquo;</span>
+                <blockquote className="mt-2 flex-1 text-lg leading-relaxed text-forest-900">{h.english}</blockquote>
+                <figcaption className="mt-5 border-t border-forest-900/10 pt-4 text-sm">
+                  <span className="font-semibold text-forest-900">{h.reference}</span>
+                  <span className="block text-forest-800/75">{h.narrator}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 5. SPONSORSHIP */}
       <section aria-labelledby="sponsor-title" className="bg-forest-900 py-16 text-ivory-50 sm:py-24">

@@ -67,16 +67,16 @@ export default function AboutPage() {
 
       <Section id="founders" tone="cream" labelledBy="founders-title">
         <SectionHeading eyebrow="Our founders" title="The people behind Al-Falah" id="founders-title">
-          <p>Al-Falah was founded by two people committed to the welfare and education of children in need.</p>
+          <p>Al-Falah was founded by a husband and wife committed to the welfare and education of children in need.</p>
         </SectionHeading>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2">
           {site.founders.map((f) => {
             const photo = f.photo ? approvedMedia(f.photo as MediaId) : null;
             return (
-              <li key={f.name} className="card flex items-center gap-5">
-                <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full">
+              <li key={f.name} className="card flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full ring-4 ring-leaf-100">
                   {photo ? (
-                    <Image src={photo.src} alt={photo.alt} fill sizes="96px" className="object-cover" />
+                    <Image src={photo.src} alt={photo.alt} fill sizes="112px" className="object-cover" style={{ objectPosition: photo.focus ?? "50% 50%" }} />
                   ) : (
                     <div aria-hidden className="flex h-full w-full items-center justify-center bg-forest-800 font-serif text-2xl text-ivory-50">
                       {f.name.replace(/^Dr\.?\s*/, "").split(" ").map((n) => n[0]).slice(0, 2).join("")}

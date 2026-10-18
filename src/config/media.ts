@@ -94,9 +94,10 @@ export const media = {
     guidance: "About Us 'Education at Al-Falah' section, landscape. Learning in a classroom.",
   },
   "founder-1": {
-    src: null,
-    alt: "",
-    approved: false,
+    src: "/images/school/founder-fuad-abdallah.jpg",
+    alt: "Portrait of Dr Fuad Abdallah Muhamed Alnahdi, co-founder of Al-Falah",
+    focus: "50% 35%",
+    approved: true,
     guidance: "Optional portrait of the first founder (square). Link it via site.founders[0].photo.",
   },
   "founder-2": {

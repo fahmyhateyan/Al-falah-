@@ -13,7 +13,7 @@
  */
 
 export type Founder = {
-  /** Display name with title, e.g. "Dr Fuwad Abdallah Alnahdi". */
+  /** Display name with title, e.g. "Dr Fuad Abdallah Muhamed Alnahdi". */
   name: string;
   /** Optional approved role description. Do not invent. */
   role: string | null;
@@ -21,6 +21,8 @@ export type Founder = {
   bio: string | null;
   /** Media slot id from src/config/media.ts, or null for no photo. */
   photo: string | null;
+  /** Optional relationship to the previous founder, used in running text, e.g. "his wife". */
+  relation?: string;
 };
 
 export const site = {
@@ -43,12 +45,12 @@ export const site = {
     mapEmbedUrl: null as string | null, // MISSING – only once address approved
   },
 
-  // VERIFIED – public names confirmed by the owner (18 Oct 2026). These differ
+  // VERIFIED – public names confirmed by the owner (18 Oct 2026, updated). These differ
   // from the names on the registered trust documents ("Fuad Abdallah Mohamed",
   // "Durra F Abdallah"), which are used only for the trust's legal details.
   founders: [
-    { name: "Dr Fuwad Abdallah Alnahdi", role: null, bio: null, photo: null },
-    { name: "Dr Durra Said Sherman", role: null, bio: null, photo: null },
+    { name: "Dr Fuad Abdallah Muhamed Alnahdi", role: null, bio: null, photo: "founder-1" },
+    { name: "Dr Durra Said Sherman", role: null, bio: null, photo: null, relation: "his wife" },
   ] satisfies Founder[],
 
   sponsorship: {
@@ -170,7 +172,8 @@ export const policyNav = [
 ] as const;
 
 export function founderNames(): string {
-  const names = site.founders.map((f) => f.name);
+  const founders: Founder[] = [...site.founders];
+  const names = founders.map((f) => (f.relation ? `${f.relation}, ${f.name}` : f.name));
   if (names.length <= 1) return names.join("");
   return `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
 }

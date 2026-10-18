@@ -17,5 +17,7 @@
 | Contact details, social links, address, bank/M-Pesa | **Missing** – hidden | `src/config/site.ts` |
 | Checkout | **Demo** until provider credentials are configured | `src/lib/payments/` |
 
-No statistics, pupil numbers, testimonials, partners, awards, quotations, hadith or Qur'an quotations have been
-added anywhere on the site.
+| Qur'an 76:8, Sahih al-Bukhari 6005, Sahih Muslim 1631 (home page) | **Added at owner's request** – quoted from published translations with references; recommend review by a local scholar | `src/content/sacred-texts.ts` |
+| Founder photo (Dr Fuad Abdallah Muhamed Alnahdi) | **Supplied by owner** | `src/config/media.ts` → `founder-1` |
+
+No statistics, pupil numbers, testimonials, partners or awards have been added anywhere on the site.

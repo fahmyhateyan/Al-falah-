@@ -40,6 +40,7 @@ const config: Config = {
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        arabic: ["var(--font-arabic)", "Amiri", "Noto Naskh Arabic", "serif"],
       },
       maxWidth: { content: "72rem" },
       borderRadius: { "4xl": "2rem" },

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
+import { Amiri, Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/config/site";
@@ -7,6 +7,7 @@ import "./globals.css";
 
 const serif = Libre_Baskerville({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-serif", display: "swap" });
 const sans = Source_Sans_3({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const arabic = Amiri({ subsets: ["arabic"], weight: ["400", "700"], variable: "--font-arabic", display: "swap" });
 
 const description = `A caring home and an education for orphaned and needy boys in ${site.location.area}, ${site.location.region}. Established in ${site.foundedYear}.`;
 
@@ -31,7 +32,7 @@ export const viewport: Viewport = { themeColor: "#293C1C", width: "device-width"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB" className={`${serif.variable} ${sans.variable}`}>
+    <html lang="en-GB" className={`${serif.variable} ${sans.variable} ${arabic.variable}`}>
       <body className="flex min-h-screen flex-col">
         <Header />
         <main id="main" className="flex-1">
