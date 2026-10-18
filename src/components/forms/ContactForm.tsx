@@ -111,7 +111,7 @@ export function ContactForm({ initialType }: { initialType?: string }) {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-forest-800 px-8 text-lg font-semibold text-ivory-50 transition-colors hover:bg-forest-900 disabled:opacity-60"
+          className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-forest-800 px-8 text-lg font-semibold text-mist-50 transition-colors hover:bg-forest-900 disabled:opacity-60"
         >
           {status === "sending" ? "Sending…" : "Send message"}
         </button>

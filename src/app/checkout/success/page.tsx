@@ -25,7 +25,7 @@ export default async function SuccessPage({ searchParams }: { searchParams: Prom
   const failed = status === "failed" || status === "expired";
 
   return (
-    <section className="bg-ivory-100 py-16 sm:py-24">
+    <section className="bg-mist-100 py-16 sm:py-24">
       <div className="container-page max-w-2xl">
         <div className="card" role="status">
           {confirmed ? (

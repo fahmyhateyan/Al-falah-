@@ -4,7 +4,7 @@ import { DraftNotice } from "./Blocks";
 export function PolicyPage({ title, intro, approved, children }: { title: string; intro: string; approved: boolean; children: ReactNode }) {
   return (
     <>
-      <section className="bg-ivory-100">
+      <section className="bg-mist-100">
         <div className="container-page py-14 sm:py-20">
           <p className="eyebrow">Policies</p>
           <h1 className="h-display max-w-3xl">{title}</h1>

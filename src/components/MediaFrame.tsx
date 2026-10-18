@@ -38,7 +38,7 @@ export function MediaFrame({
           style={{ objectPosition: photo.focus ?? "50% 50%" }}
         />
         {showCaption && photo.caption && (
-          <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent px-4 pb-3 pt-8 text-sm text-ivory-50">
+          <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent px-4 pb-3 pt-8 text-sm text-mist-50">
             {photo.caption}
           </figcaption>
         )}
@@ -78,7 +78,7 @@ export function Placeholder({
       <svg aria-hidden className={`absolute -bottom-8 left-1/2 w-[70%] max-w-md -translate-x-1/2 ${dark ? "text-forest-800" : "text-forest-100"}`} viewBox="0 0 200 110" fill="currentColor">
         <path d="M100 0c4 14 18 25 38 40 22 17 34 36 34 58v12h-14V98c0-18-10-32-28-45-14-10-24-19-30-30-6 11-16 20-30 30-18 13-28 27-28 45v12H28V98c0-22 12-41 34-58C82 25 96 14 100 0Z" />
       </svg>
-      <div className={corner ? "absolute bottom-3 right-3 flex items-center gap-2 rounded-full bg-forest-950/70 px-3 py-1.5 text-xs text-ivory-100" : "relative flex flex-col items-center gap-2 px-6 text-center"}>
+      <div className={corner ? "absolute bottom-3 right-3 flex items-center gap-2 rounded-full bg-forest-950/70 px-3 py-1.5 text-xs text-mist-100" : "relative flex flex-col items-center gap-2 px-6 text-center"}>
         <IconCamera className={corner ? "h-4 w-4" : "h-7 w-7"} />
         <span className={corner ? "font-medium" : "text-sm font-semibold"}>{label}</span>
         {showSlotIds && slot && (

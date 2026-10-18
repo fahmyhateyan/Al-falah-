@@ -49,10 +49,10 @@ export function Header() {
 
   return (
     <>
-    <header className="sticky top-0 z-40 border-b border-forest-900/10 bg-ivory-50/95 backdrop-blur supports-[backdrop-filter]:bg-ivory-50/85">
+    <header className="sticky top-0 z-40 border-b border-forest-900/10 bg-mist-50/95 backdrop-blur supports-[backdrop-filter]:bg-mist-50/85">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-full focus:bg-forest-900 focus:px-4 focus:py-2 focus:text-ivory-50"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-full focus:bg-forest-900 focus:px-4 focus:py-2 focus:text-mist-50"
       >
         Skip to main content
       </a>
@@ -80,7 +80,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link
             href="/donate"
-            className="inline-flex min-h-[44px] items-center whitespace-nowrap rounded-full bg-forest-800 px-4 py-2.5 text-[0.95rem] sm:px-5 font-semibold text-ivory-50 shadow-sm transition-colors hover:bg-forest-900"
+            className="inline-flex min-h-[44px] items-center whitespace-nowrap rounded-full bg-forest-800 px-4 py-2.5 text-[0.95rem] sm:px-5 font-semibold text-mist-50 shadow-sm transition-colors hover:bg-forest-900"
           >
             Donate Now
           </Link>
@@ -106,7 +106,7 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"
-          className="fixed inset-x-0 bottom-0 top-[72px] z-40 overflow-y-auto bg-ivory-50 lg:hidden"
+          className="fixed inset-x-0 bottom-0 top-[72px] z-40 overflow-y-auto bg-mist-50 lg:hidden"
         >
           <nav aria-label="Mobile" className="container-page py-6">
             <ul className="divide-y divide-forest-900/10 border-y border-forest-900/10">
@@ -125,10 +125,10 @@ export function Header() {
               ))}
             </ul>
             <div className="mt-8 grid gap-3">
-              <Link href="/donate" onClick={() => setOpen(false)} className="flex min-h-[52px] items-center justify-center rounded-full bg-forest-800 text-lg font-semibold text-ivory-50">
+              <Link href="/donate" onClick={() => setOpen(false)} className="flex min-h-[52px] items-center justify-center rounded-full bg-forest-800 text-lg font-semibold text-mist-50">
                 Donate Now
               </Link>
-              <Link href="/sponsor-a-child" onClick={() => setOpen(false)} className="flex min-h-[52px] items-center justify-center rounded-full bg-gold-300 text-lg font-semibold text-forest-950">
+              <Link href="/sponsor-a-child" onClick={() => setOpen(false)} className="flex min-h-[52px] items-center justify-center rounded-full bg-sprout-300 text-lg font-semibold text-forest-950">
                 Sponsor a Child
               </Link>
             </div>

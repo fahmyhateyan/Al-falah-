@@ -137,7 +137,7 @@ export function Honeypot({ value, onChange }: { value: string; onChange: (v: str
 
 export function DemoBanner() {
   return (
-    <div role="note" className="rounded-2xl border border-gold-500/50 bg-gold-300/25 p-4 text-sm text-forest-950">
+    <div role="note" className="rounded-2xl border border-sprout-500/50 bg-sprout-300/25 p-4 text-sm text-forest-950">
       <p className="font-semibold">Demonstration checkout</p>
       <p className="mt-1 text-forest-900/85">
         Online payments are not yet connected. You can try the form, but <strong>no money will be taken</strong> and no payment will be

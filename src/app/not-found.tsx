@@ -2,7 +2,7 @@ import { ButtonLink } from "@/components/Button";
 
 export default function NotFound() {
   return (
-    <section className="bg-ivory-100 py-24">
+    <section className="bg-mist-100 py-24">
       <div className="container-page max-w-2xl text-center">
         <p className="eyebrow">Page not found</p>
         <h1 className="h-display">We couldn&rsquo;t find that page</h1>

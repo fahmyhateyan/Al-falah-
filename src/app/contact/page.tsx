@@ -48,7 +48,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
                 </p>
               )}
               {contact.whatsapp && (
-                <a className="inline-flex min-h-[44px] items-center rounded-full bg-forest-800 px-5 font-semibold text-ivory-50" href={`https://wa.me/${contact.whatsapp}`} rel="noopener noreferrer" target="_blank">
+                <a className="inline-flex min-h-[44px] items-center rounded-full bg-forest-800 px-5 font-semibold text-mist-50" href={`https://wa.me/${contact.whatsapp}`} rel="noopener noreferrer" target="_blank">
                   Message us on WhatsApp
                 </a>
               )}

@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-ivory-50 font-sans text-forest-950 antialiased;
+    @apply bg-mist-50 font-sans text-forest-950 antialiased;
     font-size: 1.0625rem;
     line-height: 1.7;
   }
@@ -19,7 +19,7 @@
   }
   p { text-wrap: pretty; }
   :focus-visible {
-    outline: 3px solid theme("colors.gold.500");
+    outline: 3px solid theme("colors.sprout.500");
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -29,7 +29,7 @@
 @layer components {
   .container-page { @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8; }
   .eyebrow { @apply mb-3 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-forest-700; }
-  .eyebrow::before { content: ""; @apply inline-block h-px w-8 bg-gold-500; }
+  .eyebrow::before { content: ""; @apply inline-block h-px w-8 bg-sprout-500; }
   .eyebrow-light { @apply text-leaf-200; }
   .h-display { @apply text-[2.25rem] sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight; }
   .h-section { @apply text-3xl sm:text-4xl font-bold tracking-tight; }
@@ -47,7 +47,7 @@
   .field-error { @apply mt-1.5 text-sm font-medium text-red-800; }
   .field-hint { @apply mt-1.5 text-sm text-forest-800/75; }
   .pattern-dots {
-    background-image: radial-gradient(rgba(41, 60, 28, 0.09) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(94, 158, 62, 0.16) 1px, transparent 1px);
     background-size: 18px 18px;
   }
 }
@@ -67,7 +67,7 @@
 
 /* Visible focus for custom radio "chips" whose input is visually hidden */
 .choice:has(:focus-visible) {
-  outline: 3px solid theme("colors.gold.500");
+  outline: 3px solid theme("colors.sprout.500");
   outline-offset: 3px;
 }
 
@@ -77,7 +77,7 @@
 #hero-pause:checked ~ .hero-slides .hero-slide { animation-play-state: paused !important; }
 #hero-pause:checked ~ .hero-pause-btn .when-playing { display: none; }
 #hero-pause:checked ~ .hero-pause-btn .when-paused { display: inline-flex; }
-#hero-pause:focus-visible ~ .hero-pause-btn { outline: 3px solid theme("colors.gold.500"); outline-offset: 3px; }
+#hero-pause:focus-visible ~ .hero-pause-btn { outline: 3px solid theme("colors.sprout.500"); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .hero-slide { animation: none !important; }
   .hero-pause-btn { display: none !important; }

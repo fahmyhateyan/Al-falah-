@@ -12,13 +12,13 @@ export const metadata = pageMetadata({
   path: "/curriculum",
 });
 
-function LevelCard({ level, accent }: { level: Level; accent: "leaf" | "gold" }) {
+function LevelCard({ level, accent }: { level: Level; accent: "leaf" | "sprout" }) {
   return (
     <li className="card flex flex-col">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h4 className="text-xl font-bold">{level.name}</h4>
         {level.duration && (
-          <span className={`rounded-full px-3 py-0.5 text-sm font-semibold ${accent === "leaf" ? "bg-leaf-100 text-forest-800" : "bg-gold-300/40 text-gold-700"}`}>
+          <span className={`rounded-full px-3 py-0.5 text-sm font-semibold ${accent === "leaf" ? "bg-leaf-100 text-forest-800" : "bg-sprout-300/40 text-sprout-700"}`}>
             {level.duration}
           </span>
         )}
@@ -27,7 +27,7 @@ function LevelCard({ level, accent }: { level: Level; accent: "leaf" | "gold" })
       {level.summary && <p className="mt-3 text-forest-900/80">{level.summary}</p>}
       <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${level.name} subjects`}>
         {level.subjects.map((s) => (
-          <li key={s} className="rounded-lg bg-ivory-100 px-2.5 py-1 text-sm text-forest-900">
+          <li key={s} className="rounded-lg bg-mist-100 px-2.5 py-1 text-sm text-forest-900">
             {s}
           </li>
         ))}
@@ -84,7 +84,7 @@ export default function CurriculumPage() {
             ["Islamic values", "Belief, worship and the example of the Prophet ﷺ through Madrasa studies."],
             ["Personal development", "Good character, manners and responsibility in daily school life."],
           ].map(([t, d], i) => (
-            <li key={t} className="rounded-3xl bg-ivory-100 p-6">
+            <li key={t} className="rounded-3xl bg-mist-100 p-6">
               <span className="font-serif text-3xl font-bold text-leaf-600" aria-hidden>
                 0{i + 1}
               </span>
@@ -96,7 +96,7 @@ export default function CurriculumPage() {
       </Section>
 
       {/* STRAND A – ISLAMIC */}
-      <Section tone="cream" id="islamic" labelledBy="islamic-title">
+      <Section tone="tint" id="islamic" labelledBy="islamic-title">
         <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           <SectionHeading eyebrow="Strand A" title="Islamic curriculum: Madrasa and Tahfidh" id="islamic-title">
             <p>
@@ -113,13 +113,13 @@ export default function CurriculumPage() {
         <h3 className="mt-14 text-2xl font-bold">Ta&rsquo;lim – Madrasa levels</h3>
         <ol className="mt-6 grid gap-5 lg:grid-cols-3">
           {madrasaLevels.map((l) => (
-            <LevelCard key={l.name} level={l} accent="gold" />
+            <LevelCard key={l.name} level={l} accent="sprout" />
           ))}
         </ol>
 
-        <div className="mt-8 rounded-3xl bg-forest-900 p-6 text-ivory-50 sm:p-8">
-          <h3 className="text-2xl font-bold text-ivory-50">Tahfidh al-Qur&rsquo;an</h3>
-          <p className="mt-3 max-w-3xl text-ivory-100/85">{tahfidh.summary}</p>
+        <div className="mt-8 rounded-3xl bg-forest-900 p-6 text-mist-50 sm:p-8">
+          <h3 className="text-2xl font-bold text-mist-50">Tahfidh al-Qur&rsquo;an</h3>
+          <p className="mt-3 max-w-3xl text-mist-100/85">{tahfidh.summary}</p>
         </div>
       </Section>
 
@@ -177,7 +177,7 @@ export default function CurriculumPage() {
       </Section>
 
       {/* CONCURRENT STUDY */}
-      <Section tone="cream" labelledBy="together-title">
+      <Section tone="tint" labelledBy="together-title">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Learning together</p>
           <h2 id="together-title" className="h-section">

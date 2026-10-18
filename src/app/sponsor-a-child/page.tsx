@@ -31,7 +31,7 @@ export default function SponsorPage() {
   const price = sponsorshipPrice();
   return (
     <>
-      <section className="relative overflow-hidden bg-ivory-100">
+      <section className="relative overflow-hidden bg-mist-100">
         <div className="pattern-dots absolute inset-0 opacity-50" aria-hidden />
         <div className="container-page relative grid gap-12 py-14 sm:py-20 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
           <div className="reveal">
@@ -86,8 +86,8 @@ export default function SponsorPage() {
         </SectionHeading>
         <ol className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
           {steps.map((s, i) => (
-            <li key={s.title} className="relative rounded-3xl bg-ivory-100 p-6">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-800 font-serif font-bold text-ivory-50">{i + 1}</span>
+            <li key={s.title} className="relative rounded-3xl bg-mist-100 p-6">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-800 font-serif font-bold text-mist-50">{i + 1}</span>
               <h3 className="mt-4 text-lg font-bold">{s.title}</h3>
               <p className="mt-2 text-forest-900/80">{s.text}</p>
             </li>
@@ -100,10 +100,10 @@ export default function SponsorPage() {
         )}
       </Section>
 
-      <Section tone="cream" labelledBy="privacy-title">
+      <Section tone="tint" labelledBy="privacy-title">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
-            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-800 text-ivory-50">
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-800 text-mist-50">
               <IconShield className="h-7 w-7" />
             </span>
             <h2 id="privacy-title" className="h-section mt-6">Protecting every child&rsquo;s privacy</h2>
@@ -128,7 +128,7 @@ export default function SponsorPage() {
         </div>
       </Section>
 
-      <Section tone="ivory" labelledBy="sfaq-title">
+      <Section tone="mist" labelledBy="sfaq-title">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
           <SectionHeading eyebrow="Questions" title="Sponsorship FAQs" id="sfaq-title">
             <p>
@@ -142,7 +142,7 @@ export default function SponsorPage() {
       <GivingCta title="Ready to sponsor?">
         <p>
           {price} a month gives one boy a full month of care and learning.{" "}
-          <a href="#sponsor-form" className="font-semibold text-ivory-50 underline decoration-leaf-400 underline-offset-4">Start now</a>
+          <a href="#sponsor-form" className="font-semibold text-mist-50 underline decoration-leaf-400 underline-offset-4">Start now</a>
         </p>
       </GivingCta>
     </>

@@ -48,7 +48,7 @@ export function HeroSlideshow() {
       {n > 1 && (
         <label
           htmlFor="hero-pause"
-          className="hero-pause-btn absolute bottom-4 right-4 z-20 inline-flex min-h-[40px] cursor-pointer items-center gap-2 rounded-full bg-forest-950/60 px-4 text-sm font-semibold text-ivory-50 ring-1 ring-ivory-50/30 backdrop-blur-sm hover:bg-forest-950/80 sm:bottom-6 sm:right-6"
+          className="hero-pause-btn absolute bottom-4 right-4 z-20 inline-flex min-h-[40px] cursor-pointer items-center gap-2 rounded-full bg-forest-950/60 px-4 text-sm font-semibold text-mist-50 ring-1 ring-mist-50/30 backdrop-blur-sm hover:bg-forest-950/80 sm:bottom-6 sm:right-6"
         >
           <span className="when-playing inline-flex items-center gap-2">
             <svg aria-hidden width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1" /><rect x="14" y="5" width="4" height="14" rx="1" /></svg>

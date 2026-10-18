@@ -61,7 +61,7 @@ export function SponsorForm({ demo }: { demo: boolean }) {
             <span>
               <span className="flex flex-wrap items-center gap-2 font-semibold text-forest-950">
                 Monthly sponsorship
-                <span className="rounded-full bg-forest-800 px-2 py-0.5 text-xs font-semibold text-ivory-50">Recommended</span>
+                <span className="rounded-full bg-forest-800 px-2 py-0.5 text-xs font-semibold text-mist-50">Recommended</span>
               </span>
               <span className="mt-0.5 block text-sm text-forest-900/80">
                 {formatMoney(monthlyAmount)} per child, charged every month until you cancel.
@@ -113,13 +113,13 @@ export function SponsorForm({ demo }: { demo: boolean }) {
         {errors.children && <p className="field-error">{errors.children}</p>}
       </fieldset>
 
-      <div className="rounded-3xl bg-forest-900 p-6 text-ivory-50" aria-live="polite">
+      <div className="rounded-3xl bg-forest-900 p-6 text-mist-50" aria-live="polite">
         <p className="text-sm font-semibold uppercase tracking-wider text-leaf-200">Your sponsorship</p>
         <p className="mt-2 flex flex-wrap items-baseline gap-x-2">
-          <span className="font-serif text-4xl font-bold text-gold-300">{formatMoney(total)}</span>
-          <span className="text-ivory-100/85">{frequency === "monthly" ? "per month" : "one-off payment"}</span>
+          <span className="font-serif text-4xl font-bold text-sprout-300">{formatMoney(total)}</span>
+          <span className="text-mist-100/85">{frequency === "monthly" ? "per month" : "one-off payment"}</span>
         </p>
-        <p className="mt-2 text-ivory-100/85">{sponsorshipBillingLabel(children, frequency)}.</p>
+        <p className="mt-2 text-mist-100/85">{sponsorshipBillingLabel(children, frequency)}.</p>
       </div>
 
       <SupporterFields errors={errors} values={values} onChange={(k, v) => setValues((s) => ({ ...s, [k]: v }))} />
@@ -150,7 +150,7 @@ export function SponsorForm({ demo }: { demo: boolean }) {
         <button
           type="submit"
           disabled={submitting}
-          className="inline-flex min-h-[56px] w-full items-center justify-center rounded-full bg-forest-800 px-8 text-lg font-semibold text-ivory-50 shadow-sm transition-colors hover:bg-forest-900 disabled:opacity-60"
+          className="inline-flex min-h-[56px] w-full items-center justify-center rounded-full bg-forest-800 px-8 text-lg font-semibold text-mist-50 shadow-sm transition-colors hover:bg-forest-900 disabled:opacity-60"
         >
           {submitting
             ? "Starting checkout…"

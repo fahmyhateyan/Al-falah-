@@ -22,13 +22,13 @@ export function VideoPlayer({ video, poster }: { video: VideoConfig; poster: Pos
           <Placeholder className="absolute inset-0" tone="dark" label="Poster image to come" slot={video.posterSlot} corner />
         )}
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-forest-950/90 via-forest-950/30 to-transparent p-6 sm:p-10">
-          <div className="flex items-center gap-4 pb-6 text-ivory-50 sm:pb-0">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-ivory-50/15 ring-1 ring-ivory-50/30">
+          <div className="flex items-center gap-4 pb-6 text-mist-50 sm:pb-0">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-mist-50/15 ring-1 ring-mist-50/30">
               <IconFilm className="h-6 w-6" />
             </span>
             <div>
               <p className="font-serif text-2xl font-bold sm:text-3xl">School video coming soon</p>
-              <p className="text-ivory-100/80">We are preparing a short film from the school.</p>
+              <p className="text-mist-100/80">We are preparing a short film from the school.</p>
             </div>
           </div>
         </div>
@@ -79,10 +79,10 @@ export function VideoPlayer({ video, poster }: { video: VideoConfig; poster: Pos
             <Placeholder className="absolute inset-0" tone="dark" label="Video poster image to come" slot={video.posterSlot} />
           )}
           <span className="absolute inset-0 bg-forest-950/25 transition-colors group-hover:bg-forest-950/35" />
-          <span className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-ivory-50 text-forest-900 shadow-lg transition-transform group-hover:scale-105 group-focus-visible:scale-105">
+          <span className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-mist-50 text-forest-900 shadow-lg transition-transform group-hover:scale-105 group-focus-visible:scale-105">
             <IconPlay className="ml-1 h-8 w-8" />
           </span>
-          <span className="absolute bottom-4 left-4 rounded-full bg-forest-950/70 px-3 py-1 text-xs text-ivory-100">
+          <span className="absolute bottom-4 left-4 rounded-full bg-forest-950/70 px-3 py-1 text-xs text-mist-100">
             Plays from {video.type === "youtube" ? "YouTube" : "Vimeo"} when you press play
           </span>
         </button>

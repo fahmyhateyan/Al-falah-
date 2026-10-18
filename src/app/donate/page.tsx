@@ -24,7 +24,7 @@ export default function DonatePage() {
   const showManual = manualGiving.verified && (manualGiving.bankTransfer || manualGiving.mpesaPaybill);
   return (
     <>
-      <section className="relative overflow-hidden bg-ivory-100">
+      <section className="relative overflow-hidden bg-mist-100">
         <div className="pattern-dots absolute inset-0 opacity-50" aria-hidden />
         <div className="container-page relative grid gap-12 py-14 sm:py-20 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
           <div className="reveal">

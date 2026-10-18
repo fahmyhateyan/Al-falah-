@@ -1,23 +1,25 @@
 import type { Config } from "tailwindcss";
 
 // Palette derived from the Al-Falah logo: the deep green of the dome,
-// the leaf green of the open book, with warm ivory and a restrained gold.
+// the light green of the open book, with white and soft green tints.
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
+        // Deep green of the logo's dome (800 is the exact logo colour).
         forest: {
-          50: "#F1F5EE",
-          100: "#DCE6D4",
-          200: "#B9CCAA",
-          300: "#8FAB7B",
+          50: "#F0F6EC",
+          100: "#DCEBD3",
+          200: "#B9D6A9",
+          300: "#8DBB78",
           600: "#46683A",
           700: "#34502A",
           800: "#293C1C",
-          900: "#1F2F15",
-          950: "#15200E",
+          900: "#1E3418",
+          950: "#132611",
         },
+        // Light green of the logo's open book.
         leaf: {
           100: "#E8F4DF",
           200: "#CFE8BE",
@@ -25,16 +27,18 @@ const config: Config = {
           500: "#72BC4D",
           600: "#5E9E3E",
         },
-        ivory: {
-          50: "#FDFBF5",
-          100: "#F8F4E9",
-          200: "#EFE8D6",
-          300: "#E2D8BF",
+        // Page whites and soft green tints for alternating sections.
+        mist: {
+          50: "#FFFFFF",
+          100: "#F1F8EC",
+          200: "#E2F0D8",
+          300: "#CDE5BD",
         },
-        gold: {
-          300: "#E3CB8F",
-          500: "#B8913A",
-          700: "#7A5C1C",
+        // Light-green accent for buttons and highlights on dark green.
+        sprout: {
+          300: "#A9DC88",
+          500: "#5FA83C",
+          700: "#3D6B27",
         },
       },
       fontFamily: {

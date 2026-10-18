@@ -2,14 +2,14 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { IconArrow } from "./Icons";
 
-type Variant = "primary" | "gold" | "secondary" | "ghost-light" | "outline-light";
+type Variant = "primary" | "accent" | "secondary" | "ghost-light" | "outline-light";
 
 const styles: Record<Variant, string> = {
-  primary: "bg-forest-800 text-ivory-50 hover:bg-forest-900 shadow-sm",
-  gold: "bg-gold-300 text-forest-950 hover:bg-[#ECD9A6] shadow-sm",
-  secondary: "bg-white text-forest-900 ring-1 ring-inset ring-forest-900/20 hover:ring-forest-900/40 hover:bg-ivory-100",
+  primary: "bg-forest-800 text-mist-50 hover:bg-forest-900 shadow-sm",
+  accent: "bg-sprout-300 text-forest-950 hover:bg-[#BEE6A3] shadow-sm",
+  secondary: "bg-white text-forest-900 ring-1 ring-inset ring-forest-900/20 hover:ring-forest-900/40 hover:bg-mist-100",
   "ghost-light": "bg-white/10 text-white ring-1 ring-inset ring-white/40 hover:bg-white/20 backdrop-blur-sm",
-  "outline-light": "text-ivory-50 ring-1 ring-inset ring-ivory-50/50 hover:bg-ivory-50/10",
+  "outline-light": "text-mist-50 ring-1 ring-inset ring-mist-50/50 hover:bg-mist-50/10",
 };
 
 export function ButtonLink({

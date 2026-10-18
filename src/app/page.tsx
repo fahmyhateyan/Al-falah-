@@ -58,19 +58,19 @@ export default function HomePage() {
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent" />
         </div>
         <div className="container-page flex min-h-[540px] items-center py-16 sm:min-h-[600px] lg:min-h-[min(72vh,660px)]">
-          <div className="reveal max-w-2xl text-ivory-50">
-            <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-ivory-50/10 px-4 py-1.5 text-sm font-medium text-leaf-200 ring-1 ring-ivory-50/20 backdrop-blur-sm">
+          <div className="reveal max-w-2xl text-mist-50">
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-mist-50/10 px-4 py-1.5 text-sm font-medium text-leaf-200 ring-1 ring-mist-50/20 backdrop-blur-sm">
               {site.location.area}, {site.location.region}
             </p>
-            <h1 id="hero-title" className="h-display text-ivory-50">
+            <h1 id="hero-title" className="h-display text-mist-50">
               A caring home. An education. A brighter future.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ivory-100/90 sm:text-xl">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist-100/90 sm:text-xl">
               Established in {site.foundedYear}, Al-Falah gives orphaned and needy boys in {site.location.area} a safe place to live, good
               food, a primary education and Qur&rsquo;an learning – everything a child needs to grow with confidence and faith.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/sponsor-a-child" variant="gold" size="lg">
+              <ButtonLink href="/sponsor-a-child" variant="accent" size="lg">
                 Sponsor a Child
               </ButtonLink>
               <ButtonLink href="/donate" variant="ghost-light" size="lg">
@@ -82,7 +82,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. VIDEO – must stay directly after the hero */}
-      <section aria-labelledby="video-title" className="bg-ivory-50 pb-16 pt-14 sm:pb-24 sm:pt-20">
+      <section aria-labelledby="video-title" className="bg-mist-50 pb-16 pt-14 sm:pb-24 sm:pt-20">
         <div className="container-page">
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow">Our school</p>
@@ -120,7 +120,7 @@ export default function HomePage() {
       </Section>
 
       {/* 4. WHAT CHILDREN RECEIVE */}
-      <Section tone="cream" labelledBy="provide-title">
+      <Section tone="tint" labelledBy="provide-title">
         <SectionHeading eyebrow="What we provide" title="Everything a child needs to thrive" id="provide-title" align="center">
           <p>Each boy at Al-Falah receives care for the whole person – body, mind and character.</p>
         </SectionHeading>
@@ -138,7 +138,7 @@ export default function HomePage() {
       </Section>
 
       {/* 4b. WHY IT MATTERS – Qur'an and hadith (see src/content/sacred-texts.ts) */}
-      <section aria-labelledby="faith-title" className="relative overflow-hidden bg-ivory-50 py-16 sm:py-24">
+      <section aria-labelledby="faith-title" className="relative overflow-hidden bg-mist-50 py-16 sm:py-24">
         <div className="pattern-dots absolute inset-0 opacity-40" aria-hidden />
         <div className="container-page relative">
           <div className="mx-auto max-w-3xl text-center">
@@ -162,7 +162,7 @@ export default function HomePage() {
           <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-2">
             {hadiths.map((h) => (
               <figure key={h.reference} className="card flex flex-col">
-                <span aria-hidden className="font-serif text-5xl leading-none text-gold-500">&ldquo;</span>
+                <span aria-hidden className="font-serif text-5xl leading-none text-sprout-500">&ldquo;</span>
                 <blockquote className="mt-2 flex-1 text-lg leading-relaxed text-forest-900">{h.english}</blockquote>
                 <figcaption className="mt-5 border-t border-forest-900/10 pt-4 text-sm">
                   <span className="font-semibold text-forest-900">{h.reference}</span>
@@ -175,23 +175,23 @@ export default function HomePage() {
       </section>
 
       {/* 5. SPONSORSHIP */}
-      <section aria-labelledby="sponsor-title" className="bg-forest-900 py-16 text-ivory-50 sm:py-24">
+      <section aria-labelledby="sponsor-title" className="bg-forest-900 py-16 text-mist-50 sm:py-24">
         <div className="container-page grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <MediaFrame id="home-sponsor" tone="dark" className="order-last aspect-[4/3] w-full rounded-4xl lg:order-first lg:aspect-[4/5]" />
           <div>
             <p className="eyebrow eyebrow-light">Sponsor a child</p>
-            <h2 id="sponsor-title" className="h-section text-ivory-50">
+            <h2 id="sponsor-title" className="h-section text-mist-50">
               Give one boy a full month of care and learning
             </h2>
             <p className="mt-6 flex items-baseline gap-2">
-              <span className="font-serif text-6xl font-bold text-gold-300 sm:text-7xl">{price}</span>
-              <span className="text-xl text-ivory-100/85">per month</span>
+              <span className="font-serif text-6xl font-bold text-sprout-300 sm:text-7xl">{price}</span>
+              <span className="text-xl text-mist-100/85">per month</span>
             </p>
-            <p className="mt-6 text-lg text-ivory-100/85">
+            <p className="mt-6 text-lg text-mist-100/85">
               Full monthly sponsorship covers a child&rsquo;s month of care, boarding, food, education and Qur&rsquo;an learning. Your
               regular support gives the school the stability to plan ahead and to keep each boy in its care.
             </p>
-            <ul className="mt-6 grid gap-2 text-ivory-100/90 sm:grid-cols-2">
+            <ul className="mt-6 grid gap-2 text-mist-100/90 sm:grid-cols-2">
               {["Care and boarding", "Daily meals", "Primary education", "Qur'an learning"].map((x) => (
                 <li key={x} className="flex items-center gap-2">
                   <IconCheck className="h-5 w-5 text-leaf-400" />
@@ -199,15 +199,15 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 border-l-2 border-gold-500 pl-4 text-ivory-100/80">
+            <p className="mt-6 border-l-2 border-sprout-500 pl-4 text-mist-100/80">
               Caring for orphans holds a special place in Islam. Many supporters also hope that a child&rsquo;s education and Qur&rsquo;an
               learning – carried with him through life – may be a form of sadaqah jariyah, a continuing charity.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <ButtonLink href="/sponsor-a-child" variant="gold" size="lg">
+              <ButtonLink href="/sponsor-a-child" variant="accent" size="lg">
                 Sponsor a Child
               </ButtonLink>
-              <Link href="/sponsor-a-child#how-it-works" className="inline-flex min-h-[48px] items-center px-2 font-semibold text-ivory-50 underline decoration-leaf-400 decoration-2 underline-offset-[6px]">
+              <Link href="/sponsor-a-child#how-it-works" className="inline-flex min-h-[48px] items-center px-2 font-semibold text-mist-50 underline decoration-leaf-400 decoration-2 underline-offset-[6px]">
                 How sponsorship works
               </Link>
             </div>
@@ -216,7 +216,7 @@ export default function HomePage() {
       </section>
 
       {/* 6. CURRICULUM */}
-      <Section tone="ivory" labelledBy="curriculum-title">
+      <Section tone="mist" labelledBy="curriculum-title">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <SectionHeading eyebrow="Our curriculum" title="Two strands of learning, side by side" id="curriculum-title">
@@ -269,9 +269,9 @@ export default function HomePage() {
       </Section>
 
       {/* 8. TRUST & ACCOUNTABILITY */}
-      <Section tone="cream" labelledBy="trust-title">
+      <Section tone="tint" labelledBy="trust-title">
         <div className="grid gap-10 lg:grid-cols-[auto_1fr] lg:gap-16">
-          <span className="flex h-16 w-16 items-center justify-center rounded-3xl bg-forest-800 text-ivory-50">
+          <span className="flex h-16 w-16 items-center justify-center rounded-3xl bg-forest-800 text-mist-50">
             <IconShield className="h-8 w-8" />
           </span>
           <div className="max-w-3xl">
@@ -293,7 +293,7 @@ export default function HomePage() {
       </Section>
 
       {/* 9. FAQ */}
-      <Section tone="ivory" labelledBy="faq-title">
+      <Section tone="mist" labelledBy="faq-title">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
           <SectionHeading eyebrow="Questions" title="Frequently asked questions" id="faq-title">
             <p>

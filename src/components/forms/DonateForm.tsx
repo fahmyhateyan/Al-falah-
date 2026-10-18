@@ -53,7 +53,7 @@ export function DonateForm({ demo }: { demo: boolean }) {
   }
 
   const tab = (value: Frequency, label: string) => (
-    <label className={`choice flex min-h-[48px] flex-1 cursor-pointer items-center justify-center rounded-full px-4 text-center font-semibold transition ${frequency === value ? "bg-forest-800 text-ivory-50 shadow-sm" : "text-forest-900 hover:bg-forest-900/5"}`}>
+    <label className={`choice flex min-h-[48px] flex-1 cursor-pointer items-center justify-center rounded-full px-4 text-center font-semibold transition ${frequency === value ? "bg-forest-800 text-mist-50 shadow-sm" : "text-forest-900 hover:bg-forest-900/5"}`}>
       <input type="radio" name="frequency" value={value} checked={frequency === value} onChange={() => { setFrequency(value); setBillingConsent(false); }} className="sr-only" />
       {label}
     </label>
@@ -64,7 +64,7 @@ export function DonateForm({ demo }: { demo: boolean }) {
       {demo && <DemoBanner />}
 
       {enabledFunds.length === 1 ? (
-        <div className="rounded-2xl bg-ivory-100 p-4">
+        <div className="rounded-2xl bg-mist-100 p-4">
           <p className="text-sm font-semibold uppercase tracking-wider text-forest-700">Your gift supports</p>
           <p className="mt-1 font-serif text-lg font-bold text-forest-950">{enabledFunds[0].name}</p>
           <p className="text-sm text-forest-900/80">{enabledFunds[0].description}</p>
@@ -123,22 +123,22 @@ export function DonateForm({ demo }: { demo: boolean }) {
         {preset !== "custom" && errors.amount && <p className="field-error">{errors.amount}</p>}
       </fieldset>
 
-      <div className="rounded-3xl bg-forest-900 p-6 text-ivory-50" aria-live="polite">
+      <div className="rounded-3xl bg-forest-900 p-6 text-mist-50" aria-live="polite">
         <p className="text-sm font-semibold uppercase tracking-wider text-leaf-200">Your gift</p>
         {amountValid ? (
           <>
             <p className="mt-2 flex flex-wrap items-baseline gap-x-2">
-              <span className="font-serif text-4xl font-bold text-gold-300">{formatMoney(amount!, currency)}</span>
-              <span className="text-ivory-100/85">{frequency === "monthly" ? "per month" : "one-off"}</span>
+              <span className="font-serif text-4xl font-bold text-sprout-300">{formatMoney(amount!, currency)}</span>
+              <span className="text-mist-100/85">{frequency === "monthly" ? "per month" : "one-off"}</span>
             </p>
-            <p className="mt-2 text-ivory-100/85">{donationBillingLabel(amount!, frequency)}.</p>
+            <p className="mt-2 text-mist-100/85">{donationBillingLabel(amount!, frequency)}.</p>
           </>
         ) : (
-          <p className="mt-2 text-ivory-100/85">Enter an amount between {formatMoney(minAmount, currency)} and {formatMoney(maxAmount, currency)}.</p>
+          <p className="mt-2 text-mist-100/85">Enter an amount between {formatMoney(minAmount, currency)} and {formatMoney(maxAmount, currency)}.</p>
         )}
-        <p className="mt-4 border-t border-ivory-50/15 pt-4 text-sm text-ivory-100/80">
+        <p className="mt-4 border-t border-mist-50/15 pt-4 text-sm text-mist-100/80">
           Want to support one boy fully?{" "}
-          <Link href="/sponsor-a-child" className="font-semibold text-ivory-50 underline decoration-leaf-400 underline-offset-4">
+          <Link href="/sponsor-a-child" className="font-semibold text-mist-50 underline decoration-leaf-400 underline-offset-4">
             Sponsor a child for {formatMoney(site.sponsorship.monthlyAmount)} a month
           </Link>
         </p>
@@ -166,7 +166,7 @@ export function DonateForm({ demo }: { demo: boolean }) {
         <button
           type="submit"
           disabled={submitting}
-          className="inline-flex min-h-[56px] w-full items-center justify-center rounded-full bg-forest-800 px-8 text-lg font-semibold text-ivory-50 shadow-sm transition-colors hover:bg-forest-900 disabled:opacity-60"
+          className="inline-flex min-h-[56px] w-full items-center justify-center rounded-full bg-forest-800 px-8 text-lg font-semibold text-mist-50 shadow-sm transition-colors hover:bg-forest-900 disabled:opacity-60"
         >
           {submitting
             ? "Starting checkout…"

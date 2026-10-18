@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Checkout cancelled", robots: { index
 export default async function CancelledPage({ searchParams }: { searchParams: Promise<{ kind?: string }> }) {
   const { kind } = await searchParams;
   return (
-    <section className="bg-ivory-100 py-16 sm:py-24">
+    <section className="bg-mist-100 py-16 sm:py-24">
       <div className="container-page max-w-2xl">
         <div className="card">
           <h1 className="text-3xl font-bold sm:text-4xl">Checkout cancelled</h1>

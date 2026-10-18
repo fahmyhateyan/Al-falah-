@@ -65,7 +65,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section id="founders" tone="cream" labelledBy="founders-title">
+      <Section id="founders" tone="tint" labelledBy="founders-title">
         <SectionHeading eyebrow="Our founders" title="The people behind Al-Falah" id="founders-title">
           <p>Al-Falah was founded by a husband and wife committed to the welfare and education of children in need.</p>
         </SectionHeading>
@@ -78,7 +78,7 @@ export default function AboutPage() {
                   {photo ? (
                     <Image src={photo.src} alt={photo.alt} fill sizes="112px" className="object-cover" style={{ objectPosition: photo.focus ?? "50% 50%" }} />
                   ) : (
-                    <div aria-hidden className="flex h-full w-full items-center justify-center bg-forest-800 font-serif text-2xl text-ivory-50">
+                    <div aria-hidden className="flex h-full w-full items-center justify-center bg-forest-800 font-serif text-2xl text-mist-50">
                       {f.name.replace(/^Dr\.?\s*/, "").split(" ").map((n) => n[0]).slice(0, 2).join("")}
                     </div>
                   )}
@@ -108,7 +108,7 @@ export default function AboutPage() {
                 ["Learning", "a primary education following the Kenyan curriculum, building the skills every child needs."],
                 ["Islamic development", "Qur'an reading and memorisation, Islamic studies, and the nurturing of good character, manners and values."],
               ].map(([t, d]) => (
-                <li key={t} className="rounded-2xl bg-ivory-100 p-5">
+                <li key={t} className="rounded-2xl bg-mist-100 p-5">
                   <span className="font-serif font-bold text-forest-900">{t}</span> – {d}
                 </li>
               ))}
@@ -121,7 +121,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section id="trust" tone="cream" labelledBy="trust-title">
+      <Section id="trust" tone="tint" labelledBy="trust-title">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
           <SectionHeading eyebrow="The trust and how we operate" title="A trust structure for the long term" id="trust-title">
             <p>{trust.summary}</p>
