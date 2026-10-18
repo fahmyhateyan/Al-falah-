@@ -63,11 +63,11 @@ export default function HomePage() {
               {site.location.area}, {site.location.region}
             </p>
             <h1 id="hero-title" className="h-display text-mist-50">
-              A caring home. An education. A brighter future.
+              Success in this life and the next begins with knowledge.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist-100/90 sm:text-xl">
-              Established in {site.foundedYear}, Al-Falah gives orphaned and needy boys in {site.location.area} a safe place to live, good
-              food, a primary education and Qur&rsquo;an learning – everything a child needs to grow with confidence and faith.
+              Qur&rsquo;an and Islamic learning alongside a full school education, for orphaned and needy boys in {site.location.area}.
+              Established in {site.foundedYear}, Al-Falah also gives every boy a safe home and good food each day.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/sponsor-a-child" variant="accent" size="lg">
