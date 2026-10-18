@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Section, SectionHeading } from "@/components/Blocks";
 import { DonateForm } from "@/components/forms/DonateForm";
+import { GiveSwitch } from "@/components/GiveSwitch";
 import { IconHeart } from "@/components/Icons";
 import { MediaFrame } from "@/components/MediaFrame";
 import { site } from "@/config/site";
@@ -53,7 +54,8 @@ export default function DonatePage() {
             <MediaFrame id="donate-hero" className="mt-8 hidden aspect-[16/10] w-full rounded-4xl lg:block" />
           </div>
           <div className="card h-fit lg:sticky lg:top-24">
-            <h2 className="text-2xl font-bold">Make a donation</h2>
+            <GiveSwitch active="donate" />
+            <h2 className="mt-6 text-2xl font-bold">Make a donation</h2>
             <div className="mt-6">
               <DonateForm demo={demo} />
             </div>

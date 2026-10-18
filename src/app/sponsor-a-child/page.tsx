@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { GivingCta, Section, SectionHeading } from "@/components/Blocks";
 import { Faq } from "@/components/Faq";
+import { GiveSwitch } from "@/components/GiveSwitch";
 import { SponsorForm } from "@/components/forms/SponsorForm";
 import { IconBook, IconBowl, IconCheck, IconHome, IconPencil, IconShield } from "@/components/Icons";
 import { MediaFrame } from "@/components/MediaFrame";
@@ -40,6 +41,12 @@ export default function SponsorPage() {
               Your sponsorship supports a full month of care for one boy at Al-Falah – a safe place to sleep, daily meals, a primary
               education and Qur&rsquo;an learning. It is full monthly sponsorship: one gift that covers a child&rsquo;s whole month.
             </p>
+            <p className="mt-4 text-forest-900/85">
+              Would you like to give a different amount?{" "}
+              <Link href="/donate" className="font-semibold text-forest-800 underline decoration-leaf-500 decoration-2 underline-offset-4">
+                Make a donation of any size
+              </Link>
+            </p>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {[
                 [IconHome, "Care and boarding"],
@@ -60,7 +67,8 @@ export default function SponsorPage() {
           </div>
           <div id="sponsor-form" className="scroll-mt-24">
             <div className="card lg:sticky lg:top-24">
-              <h2 className="text-2xl font-bold">Start your sponsorship</h2>
+              <GiveSwitch active="sponsor" />
+              <h2 className="mt-6 text-2xl font-bold">Start your sponsorship</h2>
               <p className="mt-1 text-forest-900/80">
                 1 child {price}/month · 2 children {formatMoney(sponsorshipTotal(2))}/month · and so on
               </p>
