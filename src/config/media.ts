@@ -117,7 +117,7 @@ export const media = {
   },
   "founder-1": {
     src: "/images/school/founder-fuad-abdallah.jpg",
-    alt: "Portrait of Dr Fuwad Abdallah, co-founder of Al-Falah",
+    alt: "Portrait of Dr Fuwad Abdallah Muhamed Alnahdi, co-founder of Al-Falah",
     focus: "50% 35%",
     approved: true,
     guidance: "Optional portrait of the first founder (square). Link it via site.founders[0].photo.",

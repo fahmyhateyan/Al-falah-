@@ -18,6 +18,6 @@
 | Checkout | **Demo** until provider credentials are configured | `src/lib/payments/` |
 
 | Qur'an 76:8, Sahih al-Bukhari 6005, Sahih Muslim 1631 (home page) | **Added at owner's request** – quoted from published translations with references; recommend review by a local scholar | `src/content/sacred-texts.ts` |
-| Founder photo (Dr Fuwad Abdallah) | **Supplied by owner** | `src/config/media.ts` → `founder-1` |
+| Founder photo (Dr Fuwad Abdallah Muhamed Alnahdi) | **Supplied by owner** | `src/config/media.ts` → `founder-1` |
 
 No statistics, pupil numbers, testimonials, partners or awards have been added anywhere on the site.
