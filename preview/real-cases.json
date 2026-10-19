@@ -1,0 +1,127 @@
+[
+ {
+  "title": "Composite Masking",
+  "before_image": "/storage/media/treatment_composite_restoration_before_aligned.jpg",
+  "after_image": "/storage/media/treatment_composite_restoration_after_aligned.jpg"
+ },
+ {
+  "title": "Full Mouth Teeth Cleaning",
+  "before_image": "/storage/media/treatment_full_mouth_cleaning_before.jpg",
+  "after_image": "/storage/media/treatment_full_mouth_cleaning_after.jpg"
+ },
+ {
+  "title": "Veneers - Upper Teeth",
+  "before_image": "/storage/media/treatment_veneers_upper_teeth_before_aligned.jpg",
+  "after_image": "/storage/media/treatment_veneers_upper_teeth_after_aligned.jpg"
+ },
+ {
+  "title": "Custom Crown",
+  "before_image": "/storage/media/treatment_custom_crown_before_aligned.jpg",
+  "after_image": "/storage/media/treatment_custom_crown_after_aligned.jpg"
+ },
+ {
+  "title": "Veneers",
+  "before_image": "/storage/media/treatment_veneers_before_aligned.jpg",
+  "after_image": "/storage/media/treatment_veneers_after_aligned.jpg"
+ },
+ {
+  "title": "Composite Masking",
+  "before_image": "/storage/media/ba_composite_masking_before_aligned.jpeg",
+  "after_image": "/storage/media/ba_composite_masking_after_aligned.jpeg"
+ },
+ {
+  "title": "Crowns",
+  "before_image": "/storage/media/ba_crowns_before_aligned.jpeg",
+  "after_image": "/storage/media/ba_crowns_after_aligned.jpeg"
+ },
+ {
+  "title": "Crowns & Gum Disease Treatment",
+  "before_image": "/storage/media/ba_crowns_gum_disease_before.jpg",
+  "after_image": "/storage/media/ba_crowns_gum_disease_after.jpeg"
+ },
+ {
+  "title": "Crowns & Whitening",
+  "before_image": "/storage/media/ba_crowns_whitening_before_aligned.jpg",
+  "after_image": "/storage/media/ba_crowns_whitening_after_aligned.jpg"
+ },
+ {
+  "title": "Dental Bridges 1",
+  "before_image": "/storage/media/ba_dental_bridges_1_before_aligned.jpg",
+  "after_image": "/storage/media/ba_dental_bridges_1_after_aligned.jpeg"
+ },
+ {
+  "title": "Dental Bridges 2",
+  "before_image": "/storage/media/ba_dental_bridges_2_before_aligned.jpeg",
+  "after_image": "/storage/media/ba_dental_bridges_2_after_aligned.jpeg"
+ },
+ {
+  "title": "Dental Bridges 3",
+  "before_image": "/storage/media/ba_dental_bridges_3_before.jpeg",
+  "after_image": "/storage/media/ba_dental_bridges_3_after.jpeg"
+ },
+ {
+  "title": "Dental Implants",
+  "before_image": "/storage/media/ba_dental_implants_before_aligned.jpeg",
+  "after_image": "/storage/media/ba_dental_implants_after_aligned.jpeg"
+ },
+ {
+  "title": "Full Mouth Restoration 1",
+  "before_image": "/storage/media/ba_full_mouth_1_before_aligned.jpg",
+  "after_image": "/storage/media/ba_full_mouth_1_after_aligned.jpg"
+ },
+ {
+  "title": "Full Mouth Restoration 2",
+  "before_image": "/storage/media/ba_full_mouth_2_before_aligned.jpeg",
+  "after_image": "/storage/media/ba_full_mouth_2_after_aligned.jpeg"
+ },
+ {
+  "title": "Implant & Crown",
+  "before_image": "/storage/media/ba_implant_crown_before_aligned.jpeg",
+  "after_image": "/storage/media/ba_implant_crown_after_aligned.jpeg"
+ },
+ {
+  "title": "Implant Overdenture",
+  "before_image": "/storage/media/ba_implant_overdenture_before.jpeg",
+  "after_image": "/storage/media/ba_implant_overdenture_after.jpeg"
+ },
+ {
+  "title": "Invisalign 1",
+  "before_image": "/storage/media/ba_invisalign_1_before_aligned.jpeg",
+  "after_image": "/storage/media/ba_invisalign_1_after_aligned.jpeg"
+ },
+ {
+  "title": "Invisalign 2",
+  "before_image": "/storage/media/ba_invisalign_2_before_aligned.jpeg",
+  "after_image": "/storage/media/ba_invisalign_2_after_aligned.jpeg"
+ },
+ {
+  "title": "Treatment Result 1",
+  "before_image": "/storage/media/ba_result_1_before_aligned.png",
+  "after_image": "/storage/media/ba_result_1_after_aligned.png"
+ },
+ {
+  "title": "Treatment Result 2",
+  "before_image": "/storage/media/ba_result_2_before_aligned.png",
+  "after_image": "/storage/media/ba_result_2_after_aligned.png"
+ },
+ {
+  "title": "Treatment Result 3",
+  "before_image": "/storage/media/ba_result_3_before_aligned.png",
+  "after_image": "/storage/media/ba_result_3_after_aligned.png"
+ },
+ {
+  "title": "Treatment Result 4",
+  "before_image": "/storage/media/ba_result_4_before_aligned.png",
+  "after_image": "/storage/media/ba_result_4_after_aligned.png"
+ },
+ {
+  "title": "Treatment Result 5",
+  "before_image": "/storage/media/ba_result_5_before_aligned.png",
+  "after_image": "/storage/media/ba_result_5_after_aligned.png"
+ },
+ {
+  "title": "Treatment Result 6",
+  "before_image": "/storage/media/ba_result_6_before_aligned.png",
+  "after_image": "/storage/media/ba_result_6_after_aligned.png"
+ }
+]
