@@ -44,7 +44,7 @@ From the supplied **Certificate of Incorporation** (Trustees (Perpetual Successi
 
 - [x] School photographs supplied (14) and placed in every slot and the gallery.
 - [ ] Confirm consent arrangements cover publishing these photos – several show boys' faces clearly.
-- [ ] School video (MP4 or YouTube/Vimeo) with captions, and a poster frame.
+- [x] School video on YouTube (https://youtu.be/C6L1Myn7eLE). Consider adding English captions in YouTube Studio.
 - [ ] Higher-resolution or vector logo (the supplied JPG was cropped and used intact).
 - [ ] Written confirmation that published photos are approved for public use under the school's consent arrangements.
 

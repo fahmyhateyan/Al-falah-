@@ -423,8 +423,8 @@ export type VideoConfig = {
 };
 
 export const video: VideoConfig = {
-  type: "none",
-  src: null,
+  type: "youtube",
+  src: "C6L1Myn7eLE", // https://youtu.be/C6L1Myn7eLE – supplied by the owner
   captionsSrc: null,
   captionsLabel: "English",
   title: "A short film about Al-Falah School, Kikambala",

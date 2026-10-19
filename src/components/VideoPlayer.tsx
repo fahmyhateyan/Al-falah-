@@ -72,7 +72,19 @@ export function VideoPlayer({ video, poster }: { video: VideoConfig; poster: Pos
           loading="lazy"
         />
       ) : (
-        <button type="button" onClick={() => setActivated(true)} className="group absolute inset-0 h-full w-full text-left" aria-label={`Play video: ${video.title}`}>
+        // A real link to the video, so it still works if scripts are unavailable;
+        // with scripts, the click loads the player in place instead.
+        <a
+          href={video.type === "youtube" ? `https://www.youtube.com/watch?v=${encodeURIComponent(video.src)}` : `https://vimeo.com/${encodeURIComponent(video.src)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => {
+            e.preventDefault();
+            setActivated(true);
+          }}
+          className="group absolute inset-0 block h-full w-full text-left"
+          aria-label={`Play video: ${video.title}`}
+        >
           {poster ? (
             <Image src={poster.src} alt="" fill sizes="(min-width: 1024px) 960px, 100vw" className="object-cover" />
           ) : (
@@ -85,7 +97,7 @@ export function VideoPlayer({ video, poster }: { video: VideoConfig; poster: Pos
           <span className="absolute bottom-4 left-4 rounded-full bg-forest-950/70 px-3 py-1 text-xs text-mist-100">
             Plays from {video.type === "youtube" ? "YouTube" : "Vimeo"} when you press play
           </span>
-        </button>
+        </a>
       )}
     </div>
   );

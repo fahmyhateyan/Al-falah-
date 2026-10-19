@@ -13,7 +13,7 @@
 | FAQ answers | **Draft** – reflect current implementation; update when processes are confirmed | `src/content/faq.tsx` |
 | Privacy, terms, safeguarding pages | **Draft structures** – marked on-page as awaiting approval | `src/app/{privacy,terms,safeguarding}` |
 | Photographs and gallery | **Supplied by owner** (14 photos) | `src/config/media.ts` |
-| School video | **Placeholder** | `src/config/media.ts` |
+| School video | **Supplied by owner** (YouTube C6L1Myn7eLE) | `src/config/media.ts` |
 | Contact details, social links, address, bank/M-Pesa | **Missing** – hidden | `src/config/site.ts` |
 | Checkout | **Demo** until provider credentials are configured | `src/lib/payments/` |
 
